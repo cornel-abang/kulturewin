@@ -93,7 +93,7 @@
                         </div>
                     </div>
                     <div class="hero-about">
-                        <div class="about-body">
+                        {{-- <div class="about-body"> --}}
                             <div class="header">
                                 <span class="bar"></span> <p class="about-h"> ABOUT US</p>
                             </div>
@@ -102,7 +102,30 @@
                                 We deliver global-standard opportunities for talented individuals, brands, and enterprises looking to expand 
                                 their reach in the African market and beyond.
                             </p>
-                        </div>
+                            <div class="hero-nums-area">
+                                <div class="hero-num">
+                                    <span>15</span>
+                                    <div class="hero-num-text-area">
+                                        <span>Years</span>
+                                        <span>Experience</span>
+                                    </div>
+                                </div>
+                                <div class="hero-num">
+                                    <span>1k</span>
+                                    <div class="hero-num-text-area">
+                                        <span>Events</span>
+                                        <span>Handled</span>
+                                    </div>
+                                </div>
+                                <div class="hero-num">
+                                    <span>20</span>
+                                    <div class="hero-num-text-area">
+                                        <span>Artist</span>
+                                        <span>Agencies</span>
+                                    </div>
+                                </div>
+                            </div>
+                        {{-- </div> --}}
                     </div>
                 </div>
             </div>

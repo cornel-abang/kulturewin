@@ -30,6 +30,7 @@ font & reset css
 */
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 @import url("https://fonts.googleapis.com/css?family=Plus Jakarta Sans:100,200,300,400,500,600,700,800,900");
+@import url("https://fonts.googleapis.com/css?family=Epilogue:100,200,300,400,500,600,700,800,900");
 @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 /* 
 ---------------------------------------------
@@ -48,7 +49,7 @@ reset
 .hero-area {
   background: #101010;
   width: 1500px;
-  height: 800px;
+  height: 680px;
   padding-left: 80px;
   display: flex;
   flex-direction: row;
@@ -66,11 +67,13 @@ reset
 
 .hero-about {
   width: 415px;
-  height: 232px;
+  height: 292px;
   margin-left: 72px;
+  display: flex;
+  flex-direction: column;
 }
 
-.hero-about .about-body .about-h {
+.hero-about .about-h {
   font-family: Plus Jakarta Sans;
   font-size: 18px;
   font-weight: 800;
@@ -80,22 +83,22 @@ reset
   /* text-align: left; */
 }
 
-.hero-about .about-body .bar {
+.hero-about .bar {
   display: block;
   width: 4px;
   height: 27px;
   background: #F57141;
 }
 
-.hero-about .about-body .header {
+.hero-about .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 130px;
 }
 
-.hero-about .about-body .text {
-  /* font-family: Epilogue; */
+.hero-about .text {
+  font-family: Epilogue;
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
@@ -153,6 +156,8 @@ reset
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 3px;
+  padding: 24px;
 }
 
 .hero-play-vid div a .fa-play:before
@@ -182,6 +187,63 @@ reset
   justify-content: center;
   align-items: center;
   align-content: center;
+}
+
+.hero-nums-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 540px;
+}
+
+.hero-nums-area .hero-num {
+  font-family: Plus Jakarta Sans;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 71px;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  width: 152px;
+  height: 71px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hero-nums-area .hero-num div {
+  padding-left:10px;
+}
+
+.hero-nums-area .hero-num .hero-num-text-area  {
+  font-family: Epilogue;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  color: #F4F4F499;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 40px;
+  height: 0px;
+  padding-top: 20px;
+}
+
+.hero-nums-area .hero-num .hero-num-text-area2  {
+  font-family: Epilogue;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  color: #F4F4F499;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 50px;
+  height: 24px;
 }
 
 /* html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
