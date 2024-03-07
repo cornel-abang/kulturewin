@@ -37,6 +37,8 @@ font & reset css
 reset
 --------------------------------------------- 
 */
+
+/* Hero section and nav starts */
 .main-nav {
   display: flex;
   flex-direction: row;
@@ -244,6 +246,159 @@ reset
   align-items: flex-start;
   width: 50px;
   height: 24px;
+}
+/* Hero section and nav ends */
+
+/* Clientele section starts */
+.client-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+}
+
+.client-area .intro-txt {
+  font-family: SF Pro Display;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 45px;
+  letter-spacing: 0em;
+  color: #666666;
+}
+
+.client-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 900px;
+  margin-top: 30px;
+}
+
+.client-list img {
+  width: 150px !important;
+  height: 50px;
+}
+
+.expertise-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 700px;
+  padding-left: 75px;
+  padding-top: 150px;
+}
+
+.expertise-area h3 {
+  font-family: SF Pro Display;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 72px;
+  letter-spacing: 0em;
+  padding-bottom: 20px;
+  color: #333333;
+}
+
+.expertise-area p {
+  font-family: SF Pro Display;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  color: #666666;
+}
+
+/* Accordion */
+.faq-container {
+ width: 1200px !important;
+ padding-left: 55px;
+ padding-top: 40px;
+}
+
+.faq-item {
+  padding: 20px;
+  border-bottom: 1px solid #B8B8B8 !important;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333333 !important;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0em;
+}
+
+.faq-answer {
+  font-size: 16px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.faq-answer.active {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.icon-container i {
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon-container i.active {
+  transform: rotate(90deg);
+}
+
+.faq-item .fa-chevron-right {
+  font-size: 35px;
+}
+
+/* Experience */
+.experience-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-between;
+  width: 1000px;
+  padding-left: 75px;
+  padding-top: 150px;
+}
+
+.experience-area h3 {
+  font-family: SF Pro Display;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 77px;
+  letter-spacing: 0em;
+  padding-bottom: 20px;
+  color: #333333;
+  width: 2400px;
+}
+
+.experience-area p {
+  font-family: SF Pro Display;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 45px;/* get a formatter for css and html*/
+  letter-spacing: 0em;
+  text-align: left;
+  color: #666666;
+  padding-top: 5px;
+  padding-left: 35px; 
+  padding-right: 120px; 
 }
 
 /* html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div

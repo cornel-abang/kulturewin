@@ -9,6 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <title>Kulturewin - Welcome</title>
 
@@ -136,39 +137,101 @@
     <!-- ***** About Area Starts ***** -->
     <section class="section" id="about">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-xs-12">
-                    <div class="left-text-content">
-                        <div class="section-heading">
-                            <h6>About Us</h6>
-                            <h2>We Leave A Delicious Memory For You</h2>
-                        </div>
-                        <p>Klassy Cafe is one of the best <a href="https://templatemo.com/tag/restaurant" target="_blank" rel="sponsored">restaurant HTML templates</a> with Bootstrap v4.5.2 CSS framework. You can download and feel free to use this website template layout for your restaurant business. You are allowed to use this template for commercial purposes. <br><br>You are NOT allowed to redistribute the template ZIP file on any template donwnload website. Please contact us for more information.</p>
-                        <div class="row">
-                            <div class="col-4">
-                                <img src="{{ asset('assets/images/about-thumb-01.jpg') }}" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img src="{{ asset('assets/images/about-thumb-02.jpg') }}" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img src="{{ asset('assets/images/about-thumb-03.jpg') }}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-xs-12">
-                    <div class="right-content">
-                        <div class="thumb">
-                            <a rel="nofollow" href="http://youtube.com"><i class="fa fa-play"></i></a>
-                            <img src="{{ asset('assets/images/about-video-bg.jpg') }}" alt="">
-                        </div>
-                    </div>
+            <div class="client-area">
+                <div class="intro-txt">Here are people we have worked with</div>
+                <div class="client-list">
+                    <img src="{{ asset('assets/images/icons/musixlab.png')}}">
+                    <img src="{{ asset('assets/images/icons/north.png')}}">
+                    <img src="{{ asset('assets/images/icons/vihe.png')}}">
+                    <img src="{{ asset('assets/images/icons/sharelocks.png')}}">
                 </div>
             </div>
         </div>
     </section>
     <!-- ***** About Area Ends ***** -->
+
+    <!-- ***** Menu Area Starts ***** -->
+    <section class="section" id="">
+        <div class="expertise-area">
+            <h3>Our Area of Expertise</h3>
+            <p>Our expertise extends far beyond the stage. 
+                We're a team of passionate experts dedicated to pushing boundaries and exceeding expectations. 
+                We possess diverse skills and knowledge that allow us to deliver truly memorable experiences.
+            </p>
+        </div>
+    </section>
+    <!-- ***** Menu Area Ends ***** -->
+
+    <!-- ***** Menu Area Starts ***** -->
+    <section class="section" id="">
+        <div class="faq-container">
+            <a href="">
+                <div class="faq-item">
+                    <div class="faq-question">Concerts</div>
+                    <div class="icon-container">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </a>
+            {{-- <div class="faq-answer">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div> --}}
+            <a href="">
+                <div class="faq-item">
+                    <div class="faq-question">Production</div>
+                    <div class="icon-container">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </a>
+            {{-- <div class="faq-answer">
+                <p>To fill the blank elements on the page.</p>
+            </div> --}}
+            <a href="">
+                <div class="faq-item">
+                    <div class="faq-question">Talent Management</div>
+                    <div class="icon-container">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </a>
+            {{-- <div class="faq-answer">
+                <p>There are many variations of passages of Lorem Ipsum available, but i use lipsum.com.</p>
+            </div> --}}
+            <a href="">
+                <div class="faq-item">
+                    <div class="faq-question">Marketing</div>
+                    <div class="icon-container">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </a>
+            {{-- <div class="faq-answer">
+                <p>There are many variations of passages of Lorem Ipsum available, but i use lipsum.com.</p>
+            </div> --}}
+            <a href="">
+                <div class="faq-item">
+                    <div class="faq-question">Event Management</div>
+                    <div class="icon-container">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </a>
+            {{-- <div class="faq-answer">
+                <p>There are many variations of passages of Lorem Ipsum available, but i use lipsum.com.</p>
+            </div> --}}
+        </div>
+    </section>
+    <!-- ***** Menu Area Ends ***** -->
+
+    <section class="section" id="">
+        <div class="experience-area">
+            <h3>Creators of Iconic Experience</h3>
+            <p>We believe in the power of culture to connect, inspire, and transform. That is why we champion diverse voices, 
+                curate impactful shows, and foster meaningful connections between artists, audiences, and communities.
+            </p>
+        </div>
+    </section>
 
     <!-- ***** Menu Area Starts ***** -->
     <section class="section" id="menu">
@@ -772,6 +835,36 @@
                 
             });
         });
+
+// Accordion
+// const faqItems = document.querySelectorAll('.faq-item');
+
+// faqItems.forEach(item => {
+//   const question = item.querySelector('.faq-question');
+//   const answer = item.nextElementSibling;
+//   const icon = item.querySelector('i');
+
+//   item.addEventListener('click', () => {
+//     faqItems.forEach(otherItem => {
+//       if (otherItem !== item) {
+//         const otherAnswer = otherItem.nextElementSibling;
+//         const otherIcon = otherItem.querySelector('i');
+
+//         otherAnswer.classList.remove('active');
+//         otherIcon.classList.remove('active');
+//         otherAnswer.style.maxHeight = "0";
+//       }
+//     });
+
+//     answer.classList.toggle('active');
+//     icon.classList.toggle('active');
+//     if (answer.classList.contains('active')) {
+//       answer.style.maxHeight = answer.scrollHeight + "px";
+//     } else {
+//       answer.style.maxHeight = "0";
+//     }
+//   });
+// });
 
     </script>
   </body>
