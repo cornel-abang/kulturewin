@@ -226,7 +226,7 @@
 
     <section class="section" id="">
         <div class="experience-area">
-            <h3>Creators of Iconic Experience</h3>
+            <h3>Creators of Iconic Experience</h3>              
             <p>We believe in the power of culture to connect, inspire, and transform. That is why we champion diverse voices, 
                 curate impactful shows, and foster meaningful connections between artists, audiences, and communities.
             </p>
@@ -234,565 +234,229 @@
     </section>
 
     <!-- ***** Menu Area Starts ***** -->
-    <section class="section" id="menu">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="section-heading">
-                        <h6>Our Menu</h6>
-                        <h2>Our selection of cakes with quality taste</h2>
-                    </div>
+    <section class="section" id="">
+        <div class="help-txt-area">
+            <h3>How we help</h3>
+            <p>Our services to you.</p>
+        </div>
+    </section>
+    <!-- ***** Menu Area Ends ***** -->
+
+    <!-- ***** Menu Area Starts ***** -->
+    <section class="section" id="">
+        <div class="help-menu-area">
+            <div class="help-menu">
+                <div class="help-img help-img-1"></div>
+                <div class="help-info">
+                    <div class="title">Our Story</div>
+                    <a href="">
+                        <div class="arrow">
+                            <i class="fas fa-long-arrow-right"></i>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </div>
-        <div class="menu-item-carousel">
-            <div class="col-lg-12">
-                <div class="owl-menu-item owl-carousel">
-                    <div class="item">
-                        <div class='card card1'>
-                            <div class="price"><h6>$14</h6></div>
-                            <div class='info'>
-                              <h1 class='title'>Chocolate Cake</h1>
-                              <p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
-                              <div class="main-text-button">
-                                  <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-                              </div>
-                            </div>
+            <div class="help-menu">
+                <div class="help-img help-img-2"></div>
+                <div class="help-info">
+                    <div class="title">Services</div>
+                    <a href="">
+                        <div class="arrow">
+                            <i class="fas fa-long-arrow-right"></i>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class='card card2'>
-                            <div class="price"><h6>$22</h6></div>
-                            <div class='info'>
-                              <h1 class='title'>Klassy Pancake</h1>
-                              <p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
-                              <div class="main-text-button">
-                                  <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-                              </div>
-                            </div>
+                    </a>
+                </div>
+            </div>
+            <div class="help-menu">
+                <div class="help-img help-img-3"></div>
+                <div class="help-info">
+                    <div class="title">Profile</div>
+                    <a href="">
+                        <div class="arrow">
+                            <i class="fas fa-long-arrow-right"></i>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class='card card3'>
-                            <div class="price"><h6>$18</h6></div>
-                            <div class='info'>
-                              <h1 class='title'>Tall Klassy Bread</h1>
-                              <p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
-                              <div class="main-text-button">
-                                  <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-                              </div>
-                            </div>
+                    </a>
+                </div>
+            </div>
+            <div class="help-menu">
+                <div class="help-img help-img-4"></div>
+                <div class="help-info">
+                    <div class="title">Portfolio</div>
+                    <a href="">
+                        <div class="arrow">
+                            <i class="fas fa-long-arrow-right"></i>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class='card card4'>
-                            <div class="price"><h6>$10</h6></div>
-                            <div class='info'>
-                              <h1 class='title'>Blueberry CheeseCake</h1>
-                              <p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
-                              <div class="main-text-button">
-                                  <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class='card card5'>
-                            <div class="price"><h6>$8.50</h6></div>
-                            <div class='info'>
-                              <h1 class='title'>Klassy Cup Cake</h1>
-                              <p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
-                              <div class="main-text-button">
-                                  <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class='card card3'>
-                            <div class="price"><h6>$7.25</h6></div>
-                            <div class='info'>
-                              <h1 class='title'>Klassic Cake</h1>
-                              <p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
-                              <div class="main-text-button">
-                                  <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
     <!-- ***** Menu Area Ends ***** -->
 
-    <!-- ***** Chefs Area Starts ***** -->
-    <section class="section" id="chefs">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 offset-lg-4 text-center">
-                    <div class="section-heading">
-                        <h6>Our Chefs</h6>
-                        <h2>We offer the best ingredients for you</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="chef-item">
-                        <div class="thumb">
-                            <div class="overlay"></div>
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            </ul>
-                            <img src="{{ asset('assets/images/chefs-01.jpg') }}" alt="Chef #1">
-                        </div>
-                        <div class="down-content">
-                            <h4>Randy Walker</h4>
-                            <span>Pastry Chef</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="chef-item">
-                        <div class="thumb">
-                            <div class="overlay"></div>
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                            </ul>
-                            <img src="{{ asset('assets/images/chefs-02.jpg') }}" alt="Chef #2">
-                        </div>
-                        <div class="down-content">
-                            <h4>David Martin</h4>
-                            <span>Cookie Chef</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="chef-item">
-                        <div class="thumb">
-                            <div class="overlay"></div>
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google"></i></a></li>
-                            </ul>
-                            <img src="{{ asset('assets/images/chefs-03.jpg') }}" alt="Chef #3">
-                        </div>
-                        <div class="down-content">
-                            <h4>Peter Perkson</h4>
-                            <span>Pancake Chef</span>
-                        </div>
-                    </div>
+    <!-- ***** Menu Area Starts ***** -->
+    <section class="section" id="">
+        <div class="blog-area" data-postcount="0" data-postconstcount="null">
+            <h3>Blog</h3>
+            <div class="blog-txt-ara">
+                <p>Our blog covers the most fascinating topics in the industry</p>
+                <div class="dir-arrow">
+                    <a href="#"><i class="fas fa-long-arrow-left first-arrow hide-elem"></i></a>
+                     1/10 
+                    <a href="#"><i class="fas fa-long-arrow-right sec-arrow"></i></a>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ***** Chefs Area Ends ***** -->
-
-    <!-- ***** Reservation Us Area Starts ***** -->
-    <section class="section" id="reservation">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 align-self-center">
-                    <div class="left-text-content">
-                        <div class="section-heading">
-                            <h6>Contact Us</h6>
-                            <h2>Here You Can Make A Reservation Or Just walkin to our cafe</h2>
-                        </div>
-                        <p>Donec pretium est orci, non vulputate arcu hendrerit a. Fusce a eleifend riqsie, namei sollicitudin urna diam, sed commodo purus porta ut.</p>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="phone">
-                                    <i class="fa fa-phone"></i>
-                                    <h4>Phone Numbers</h4>
-                                    <span><a href="#">080-090-0990</a><br><a href="#">080-090-0880</a></span>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="message">
-                                    <i class="fa fa-envelope"></i>
-                                    <h4>Emails</h4>
-                                    <span><a href="#">hello@company.com</a><br><a href="#">info@company.com</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="contact-form">
-                        <form id="contact" action="" method="post">
-                          <div class="row">
-                            <div class="col-lg-12">
-                                <h4>Table Reservation</h4>
-                            </div>
-                            <div class="col-lg-6 col-sm-12">
-                              <fieldset>
-                                <input name="name" type="text" id="name" placeholder="Your Name*" required="">
-                              </fieldset>
-                            </div>
-                            <div class="col-lg-6 col-sm-12">
-                              <fieldset>
-                              <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
-                            </fieldset>
-                            </div>
-                            <div class="col-lg-6 col-sm-12">
-                              <fieldset>
-                                <input name="phone" type="text" id="phone" placeholder="Phone Number*" required="">
-                              </fieldset>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                              <fieldset>
-                                <select value="number-guests" name="number-guests" id="number-guests">
-                                    <option value="number-guests">Number Of Guests</option>
-                                    <option name="1" id="1">1</option>
-                                    <option name="2" id="2">2</option>
-                                    <option name="3" id="3">3</option>
-                                    <option name="4" id="4">4</option>
-                                    <option name="5" id="5">5</option>
-                                    <option name="6" id="6">6</option>
-                                    <option name="7" id="7">7</option>
-                                    <option name="8" id="8">8</option>
-                                    <option name="9" id="9">9</option>
-                                    <option name="10" id="10">10</option>
-                                    <option name="11" id="11">11</option>
-                                    <option name="12" id="12">12</option>
-                                </select>
-                              </fieldset>
-                            </div>
-                            <div class="col-lg-6">
-                                <div id="filterDate2">    
-                                  <div class="input-group date" data-date-format="dd/mm/yyyy">
-                                    <input  name="date" id="date" type="text" class="form-control" placeholder="dd/mm/yyyy">
-                                    <div class="input-group-addon" >
-                                      <span class="glyphicon glyphicon-th"></span>
-                                    </div>
-                                  </div>
-                                </div>   
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                              <fieldset>
-                                <select value="time" name="time" id="time">
-                                    <option value="time">Time</option>
-                                    <option name="Breakfast" id="Breakfast">Breakfast</option>
-                                    <option name="Lunch" id="Lunch">Lunch</option>
-                                    <option name="Dinner" id="Dinner">Dinner</option>
-                                </select>
-                              </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                              <fieldset>
-                                <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
-                              </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                              <fieldset>
-                                <button type="submit" id="form-submit" class="main-button-icon">Make A Reservation</button>
-                              </fieldset>
-                            </div>
-                          </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Reservation Area Ends ***** -->
 
     <!-- ***** Menu Area Starts ***** -->
-    <section class="section" id="offers">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 offset-lg-4 text-center">
-                    <div class="section-heading">
-                        <h6>Klassy Week</h6>
-                        <h2>This Week’s Special Meal Offers</h2>
+    <section class="section" id="">
+        <div class="blog-menu-area">
+            <div class="blog-menu">
+                <div class="blog-img blog-img-1"></div>
+                <div class="blog-info">
+                    <div class="title">
+                        <div>Our Story</div>
+                        <p>Blog covers the most fascinating topics...</p>
                     </div>
+                    <a href="#">
+                        <div class="arrow">
+                            <i class="fas fa-long-arrow-right"></i>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="row" id="tabs">
-                        <div class="col-lg-12">
-                            <div class="heading-tabs">
-                                <div class="row">
-                                    <div class="col-lg-6 offset-lg-3">
-                                        <ul>
-                                          <li><a href='#tabs-1'><img src="{{ asset('assets/images/tab-icon-01.png') }}" alt="">Breakfast</a></li>
-                                          <li><a href='#tabs-2'><img src="{{ asset('assets/images/tab-icon-02.png') }}" alt="">Lunch</a></a></li>
-                                          <li><a href='#tabs-3'><img src="{{ asset('assets/images/tab-icon-03.png') }}" alt="">Dinner</a></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <section class='tabs-content'>
-                                <article id='tabs-1'>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="row">
-                                                <div class="left-list">
-                                                    <div class="col-lg-12">
-                                                        <div class="tab-item">
-                                                            <img src="{{ asset('assets/images/tab-item-01.png') }}" alt="">
-                                                            <h4>Fresh Chicken Salad</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
-                                                            <div class="price">
-                                                                <h6>$10.50</h6>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12">
-                                                        <div class="tab-item">
-                                                            <img src="{{ asset('assets/images/tab-item-02.png') }}" alt="">
-                                                            <h4>Orange Juice</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
-                                                            <div class="price">
-                                                                <h6>$8.50</h6>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12">
-                                                        <div class="tab-item">
-                                                            <img src="{{ asset('assets/images/tab-item-03.png') }}" alt="">
-                                                            <h4>Fruit Salad</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
-                                                            <div class="price">
-                                                                <h6>$9.90</h6>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="row">
-                                                <div class="right-list">
-                                                    <div class="col-lg-12">
-                                                        <div class="tab-item">
-                                                            <img src="{{ asset('assets/images/tab-item-04.png') }}" alt="">
-                                                            <h4>Eggs Omelette</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
-                                                            <div class="price">
-                                                                <h6>$6.50</h6>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12">
-                                                        <div class="tab-item">
-                                                            <img src="{{ asset('assets/images/tab-item-05.png') }}" alt="">
-                                                            <h4>Dollma Pire</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
-                                                            <div class="price">
-                                                                <h6>$5.00</h6>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12">
-                                                        <div class="tab-item">
-                                                            <img src="{{ asset('assets/images/tab-item-06.png') }}" alt="">
-                                                            <h4>Omelette & Cheese</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
-                                                            <div class="price">
-                                                                <h6>$4.10</h6>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>  
-                                <article id='tabs-2'>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="row">
-                                                <div class="left-list">
-                                                    <div class="col-lg-12">
-                                                        <div class="tab-item">
-                                                            <img src="{{ asset('assets/images/tab-item-04.png') }}" alt="">
-                                                            <h4>Eggs Omelette</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
-                                                            <div class="price">
-                                                                <h6>$14</h6>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12">
-                                                        <div class="tab-item">
-                                                            <img src="{{ asset('assets/images/tab-item-05.png') }}" alt="">
-                                                            <h4>Dollma Pire</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
-                                                            <div class="price">
-                                                                <h6>$18</h6>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12">
-                                                        <div class="tab-item">
-                                                            <img src="{{ asset('assets/images/tab-item-06.png') }}" alt="">
-                                                            <h4>Omelette & Cheese</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
-                                                            <div class="price">
-                                                                <h6>$22</h6>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="row">
-                                                <div class="right-list">
-                                                    <div class="col-lg-12">
-                                                        <div class="tab-item">
-                                                            <img src="{{ asset('assets/images/tab-item-01.png') }}" alt="">
-                                                            <h4>Fresh Chicken Salad</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
-                                                            <div class="price">
-                                                                <h6>$10</h6>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12">
-                                                        <div class="tab-item">
-                                                            <img src="{{ asset('assets/images/tab-item-02.png') }}" alt="">
-                                                            <h4>Orange Juice</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
-                                                            <div class="price">
-                                                                <h6>$20</h6>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12">
-                                                        <div class="tab-item">
-                                                            <img src="{{ asset('assets/images/tab-item-03.png') }}" alt="">
-                                                            <h4>Fruit Salad</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
-                                                            <div class="price">
-                                                                <h6>$30</h6>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>  
-                                <article id='tabs-3'>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="row">
-                                                <div class="left-list">
-                                                    <div class="col-lg-12">
-                                                        <div class="tab-item">
-                                                            <img src="{{ asset('assets/images/tab-item-05.png') }}" alt="">
-                                                            <h4>Eggs Omelette</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
-                                                            <div class="price">
-                                                                <h6>$14</h6>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12">
-                                                        <div class="tab-item">
-                                                            <img src="{{ asset('assets/images/tab-item-03.png') }}" alt="">
-                                                            <h4>Orange Juice</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
-                                                            <div class="price">
-                                                                <h6>$18</h6>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12">
-                                                        <div class="tab-item">
-                                                            <img src="{{ asset('assets/images/tab-item-02.png') }}" alt="">
-                                                            <h4>Fruit Salad</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
-                                                            <div class="price">
-                                                                <h6>$10</h6>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="row">
-                                                <div class="right-list">
-                                                    <div class="col-lg-12">
-                                                        <div class="tab-item">
-                                                            <img src="{{ asset('assets/images/tab-item-06.png') }}" alt="">
-                                                            <h4>Fresh Chicken Salad</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
-                                                            <div class="price">
-                                                                <h6>$8.50</h6>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12">
-                                                        <div class="tab-item">
-                                                            <img src="{{ asset('assets/images/tab-item-01.png') }}" alt="">
-                                                            <h4>Dollma Pire</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
-                                                            <div class="price">
-                                                                <h6>$9</h6>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12">
-                                                        <div class="tab-item">
-                                                            <img src="{{ asset('assets/images/tab-item-04.png') }}" alt="">
-                                                            <h4>Omelette & Cheese</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
-                                                            <div class="price">
-                                                                <h6>$11</h6>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>   
-                            </section>
-                        </div>
+            <div class="blog-menu">
+                <div class="blog-img blog-img-2"></div>
+                <div class="blog-info">
+                    <div class="title">
+                        <div>Social Media</div>
+                        <p>Blog covers the most fascinating topics...</p>
                     </div>
+                    <a href="#">
+                        <div class="arrow">
+                            <i class="fas fa-long-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="blog-menu">
+                <div class="blog-img blog-img-3"></div>
+                <div class="blog-info">
+                    <div class="title">
+                        <div>The vibes</div>
+                        <p>Blog covers the most fascinating topics...</p>
+                    </div>
+                    <a href="#">
+                        <div class="arrow">
+                            <i class="fas fa-long-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="blog-menu">
+                <div class="blog-img blog-img-4"></div>
+                <div class="blog-info">
+                    <div class="title">
+                        <div>Our Story</div>
+                        <p>Blog covers the most fascinating topics...</p>
+                    </div>
+                    <a href="#">
+                        <div class="arrow">
+                            <i class="fas fa-long-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="blog-menu">
+                <div class="blog-img blog-img-1"></div>
+                <div class="blog-info">
+                    <div class="title">
+                        <div>Our Story</div>
+                        <p>Blog covers the most fascinating topics...</p>
+                    </div>
+                    <a href="#">
+                        <div class="arrow">
+                            <i class="fas fa-long-arrow-right"></i>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ***** Chefs Area Ends ***** --> 
+    <!-- ***** Menu Area Ends ***** -->
+
+    <!-- ***** Menu Area Starts ***** -->
+    <section class="section" id="">
+        <div class="event-txt-area">
+            <h3>Upcoming Events</h3>
+            <p>Explore our calendar and secure tickets to upcoming events in your city.</p>
+        </div>
+    </section>
+    <!-- ***** Menu Area Ends ***** -->
+
+    <!-- ***** Menu Area Starts ***** -->
+    <section class="section" id="">
+        <div class="event-menu-area">
+            <div class="event-menu">
+                {{-- <div class="event-img event-img-1"></div> --}}
+                <div class="event-info">
+                    {{-- <div class="title">Our Story</div> --}}
+                    <a href="">
+                        <div class="event-cta-tx">
+                            GET YOUR TIKCET
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="event-menu">
+                {{-- <div class="event-img event-img-2"></div> --}}
+                <div class="event-info">
+                    {{-- <div class="title">Services</div> --}}
+                    <a href="">
+                        <div class="event-cta-tx">
+                            GET YOUR TICKET
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Menu Area Ends ***** -->
     
     <!-- ***** Footer Start ***** -->
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-xs-12">
-                    <div class="right-text-content">
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            </ul>
+                <div class="col-lg-12 col-xs-12 footer-area">
+                    <div class="footer-logo"><h3>KULTUREWIN</h3></div>
+                    <div class="footer-links">
+                        <a href="/">HOME</a>
+                        <a href="#">OUR STORY</a>
+                        <a href="#">WHAT WE DO</a>
+                        <a href="#">BLOGS</a>
+                        <a href="#">CONTACT</a>
+                        <a href="#">UPCOMING EVENTS/TICKETS</a>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="logo">
-                        <a href="index.html"><img src="{{ asset('assets/images/white-logo.png') }}" alt=""></a>
+                    <div class="footer-socials">
+                        <div class="social-icon">
+                            <i class="fa fa-instagram"></i>
+                        </div>
+                        <div class="social-icon">
+                            <i class="fa fa-facebook"></i>
+                        </div>
+                        <div class="social-icon">
+                            <i class="fa fa-linkedin"></i>
+                        </div>
+                        <div class="social-icon">
+                            <i class="fa fa-twitter"></i>
+                        </div>
+                        <div class="social-icon">
+                            <i class="fa fa-youtube-play"></i>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-xs-12">
-                    <div class="left-text-content">
-                        <p>© Copyright Klassy Cafe Co.
-                        
-                        <br>Design: TemplateMo</p>
+                    <div class="footer-info-txt">
+                        <p>Terms & Conditions - Privacy Policy 2024</p>
+                        <p>All Rights Reserved by <span>Kulturewin</span></p>
                     </div>
                 </div>
             </div>
@@ -835,6 +499,86 @@
                 
             });
         });
+
+    // Blog slider
+    $(".dir-arrow .fa-long-arrow-right").on("click", function (e) {
+        e.preventDefault();
+
+        if (! $(".blog-menu-area").hasClass("show-last")) {
+            countSetBlogItemsCount();
+
+            $(".blog-menu-area").addClass("show-last");
+            $(".first-arrow").fadeIn();
+
+            reduceBlogItemsCount();
+        }else{
+            let clickCount = $(".blog-area").data("postcount");
+            
+            if (clickCount >= 1) {
+                // get the int value of the margin
+                let currentMargin = $(".show-last").css("margin-left");
+                currentMargin = currentMargin.replace('-','').replace('px','');
+                let newMargin = "-" + (Number(currentMargin) + 200) + "px";
+                
+                // set the new margin to simulate sliding
+                $(".show-last").css("margin-left", newMargin);
+
+                // reduce the items count for clicks
+                reduceBlogItemsCount();
+            }else {
+                $(".sec-arrow").fadeOut();
+            }
+        }
+    });
+
+    $(".dir-arrow .fa-long-arrow-left").on("click", function (e) {
+        e.preventDefault();
+        
+        $(".sec-arrow").fadeIn();
+
+        // reduce margin to slide back
+        let clickCount = $(".blog-area").data("postcount");
+        let constCount = $(".blog-area").data("postconstcount");
+
+        if (clickCount != constCount) {
+            // get the int value of the margin
+            let currentMargin = $(".show-last").css("margin-left");
+            currentMargin = currentMargin.replace('-','').replace('px','');
+            let newMargin = (Number(currentMargin) + 400) + "px";
+            console.log(currentMargin, newMargin);  
+            // set the new margin to simulate sliding
+            $(".show-last").css("margin-left", newMargin);
+
+            // increase the items count for clicks
+            increaseBlogItemsCount();
+        }else {
+            $(".first-arrow").fadeOut();
+        }
+    });  
+    
+    function countSetBlogItemsCount()
+    {
+        let postsCount = $(".blog-menu").length;
+        let clickCount = postsCount/4; //4 is the number that can be viewed per click
+
+        $(".blog-area").data("postcount", Math.round(Number(clickCount))); // can be changed while code is exec
+        
+        if ($(".blog-area").data("postconstcount") === null) {
+            $(".blog-area").data("postconstcount", Math.round(Number(clickCount))); // cannot be changed while code is exec
+        }
+    }
+
+    function reduceBlogItemsCount()
+    {
+        let blogCount = $(".blog-area").data("postcount");
+        $(".blog-area").data("postcount", Number(blogCount) - 1);
+    }
+
+    function increaseBlogItemsCount()
+    {
+        let blogCount = $(".blog-area").data("postcount");
+        $(".blog-area").data("postcount", Number(blogCount) + 1);
+    }
 
 // Accordion
 // const faqItems = document.querySelectorAll('.faq-item');
