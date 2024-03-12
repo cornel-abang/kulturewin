@@ -1,16 +1,6 @@
 @include('layouts.header')
 
-<div class="page-breadcrumb">
-    <div class="home-link item">
-        <a href="/">Home</a>
-    </div>
-    <div class="dir-arw item">
-        <i class="fa-solid fa-angle-right"></i>
-    </div>
-    <div class="_txt item">
-        About us
-    </div>
-</div>
+@include('layouts.breadcrumb', ['pageTitle'=>'About us'])
 
 <section class="section" id="">
     <div class="about-story story">
@@ -24,10 +14,6 @@
 
 <section class="section about-img-area" id="">
     <div class="about-img"></div>
-</section>
-
-<section class="section" id="">
-    
 </section>
 
 <div class="row">

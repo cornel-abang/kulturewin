@@ -54,7 +54,7 @@
                         <ul class="nav" style="margin-left: 60px">
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="/about-us">Our Story</a></li>
-                            <li class="scroll-to-section"><a href="#menu">What We Do</a></li>
+                            <li class="scroll-to-section"><a href="/our-services">What We Do</a></li>
                             <li class="scroll-to-section"><a href="#menu">Portfolio</a></li>
                             <li class="scroll-to-section"><a href="#chefs">Blogs</a></li> 
                             <li class="scroll-to-section"><a href="#reservation">Contact</a></li> 
