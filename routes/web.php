@@ -24,3 +24,7 @@ Route::get('about-us', function () {
 Route::get('our-services', function () {
     return view('services');
 });
+
+Route::get('contact-us', function () {
+    return view('contact');
+});

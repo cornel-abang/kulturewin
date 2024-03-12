@@ -1,4 +1,5 @@
-@include('layouts.header')
+@include('layouts.header', ['pageTitle'=>'Welcome'])
+
     <!-- ***** Main Banner Area Start ***** -->
     <div id="top">
         <div class="row">

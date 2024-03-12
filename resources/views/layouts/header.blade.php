@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <title>Kulturewin - Welcome</title>
+    <title>Kulturewin - {{ $pageTitle }}</title>
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
@@ -52,12 +52,12 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav" style="margin-left: 60px">
-                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="/" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="/about-us">Our Story</a></li>
                             <li class="scroll-to-section"><a href="/our-services">What We Do</a></li>
                             <li class="scroll-to-section"><a href="#menu">Portfolio</a></li>
                             <li class="scroll-to-section"><a href="#chefs">Blogs</a></li> 
-                            <li class="scroll-to-section"><a href="#reservation">Contact</a></li> 
+                            <li class="scroll-to-section"><a href="/contact-us">Contact</a></li> 
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>

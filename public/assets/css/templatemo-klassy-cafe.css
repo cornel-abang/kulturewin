@@ -1366,6 +1366,56 @@ footer {
   color: #d8d4d4;
 }
 
+/* contact us  */
+.contact-story {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-between;
+  padding-left: 75px;
+  padding-top: 80px;
+  padding-right: 0px;
+}
+
+.contact-story p {
+  font-family: SF Pro Display;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 45px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #666666;
+  padding-top: 5px;
+  margin-right: 120px;
+  padding-right: 100px;
+}
+
+.contact-story h3 {
+  font-family: SF Pro Display;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 77px;
+  letter-spacing: 0em;
+  padding-bottom: 20px;
+  color: #333333;
+  width: 1500px;
+}
+
+.contact-form-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.contact-form-area .contact-form-box {
+  width: 1296px;
+  height: 788px;
+  border-radius: 4px;
+  background: #111617;
+}
+
 /* html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
 s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,

@@ -1,4 +1,4 @@
-@include('layouts.header')
+@include('layouts.header', ['pageTitle'=>'Our services'])
 
 @include('layouts.breadcrumb', ['pageTitle'=>'Our services'])
 
