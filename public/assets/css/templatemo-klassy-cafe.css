@@ -968,6 +968,217 @@ footer {
   color: #FFFFFF;
   font-weight: bold;
 }
+/* Home Page Css Ends */
+
+/* About Us Starts */
+.page-breadcrumb{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-top: 200px;
+  width: 200px;
+  width: 170px;
+}
+
+.page-breadcrumb a, .page-breadcrumb ._txt{
+  font-family: SF Pro Display !important;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #333333;
+}
+
+.page-breadcrumb i {
+  font-size: 11px;
+  color: #333333;
+}
+
+.page-breadcrumb .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-breadcrumb ._txt {
+  color: #F57141;
+
+}
+
+.about-story {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-between;
+  width: 1250px;
+  padding-left: 75px;
+  padding-top: 80px
+}
+
+.about-story p {
+  font-family: SF Pro Display;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 45px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #666666;
+  padding-top: 5px;
+  padding-left: 35px;
+  padding-right: 10px;
+}
+
+.about-story h3 {
+  font-family: SF Pro Display;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 77px;
+  letter-spacing: 0em;
+  padding-bottom: 20px;
+  color: #333333;
+  width: 2400px;
+}
+
+.about-img-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.about-img {
+  width: 1296px;
+  height: 400px;
+  background: url("/assets/images/about.png");
+}
+
+.about-us-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.our-vision-area {
+  width: 640px;
+  height: 503px;
+  border: 1px solid #F57141;
+  margin-left: 72px;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 97px 100px 80px 90px;
+}
+
+.our-vision-area .vision-box {
+  width: 51px;
+  height: 51px;
+  background: #F57141;
+}
+
+.our-vision-area .vision-title {
+  font-family: Plus Jakarta Sans;
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 86px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #4E4E4E;
+}
+
+.our-vision-area .vision-txt {
+  font-family: Epilogue;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  color: #827e7e;
+}
+
+.our-mission-area {
+  width: 640px;
+  height: 503px;
+  background: #F57141;
+  margin-left: 730px;
+  margin-top: -39px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 97px 100px 80px 90px;
+}
+
+.our-mission-area .mission-box {
+  width: 51px;
+  height: 51px;
+  background: #FFFFFF;
+}
+
+.our-mission-area .mission-title {
+  font-family: Plus Jakarta Sans;
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 86px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.our-mission-area .mission-txt {
+  font-family: Epilogue;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  color: #d8d4d4;
+}
+
+.our-prop-area {
+  width: 640px;
+  height: 751px;
+  border: 1px solid #F57141;
+  margin-left: 72px;
+  margin-top: -89px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 97px 100px 80px 90px;
+}
+
+.our-prop-area .prop-box {
+  width: 51px;
+  height: 51px;
+  background: #F57141;
+}
+
+.our-prop-area .prop-title {
+  font-family: Plus Jakarta Sans;
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 86px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #4E4E4E;
+}
+
+.our-prop-area .prop-txt {
+  font-family: Epilogue;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  color: #827e7e;
+}
 
 /* html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
