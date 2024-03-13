@@ -28,3 +28,11 @@ Route::get('our-services', function () {
 Route::get('contact-us', function () {
     return view('contact');
 });
+
+Route::get('our-portfolio', function () {
+    return view('portfolio');
+});
+
+Route::get('book-artist', function () {
+    return view('book-artist');
+});

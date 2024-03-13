@@ -338,20 +338,6 @@ reset
   letter-spacing: 0em;
 }
 
-.faq-answer {
-  font-size: 16px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
-  text-align: center;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.faq-answer.active {
-  border-bottom: 1px solid #e0e0e0;
-}
-
 .icon-container i {
   font-size: 16px;
   cursor: pointer;
@@ -1639,6 +1625,433 @@ footer {
   font-weight: 800;
   line-height: 48px;
   letter-spacing: 0em;
+}
+
+/* portfolio */
+.portfolio-story {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-between;
+  width: 1400px;
+  padding-left: 75px;
+  padding-top: 80px;
+  padding-right: 0px;
+}
+
+.portfolio-story p {
+  font-family: SF Pro Display;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 45px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #666666;
+  padding-top: 5px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.portfolio-story h3 {
+  font-family: SF Pro Display;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 77px;
+  letter-spacing: 0em;
+  padding-bottom: 20px;
+  color: #333333;
+  width: 1000px;
+}
+
+.portfolio-img-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.portfolio-img {
+  width: 1296px;
+  height: 400px;
+  background: url("/assets/images/portfolio.png");
+}
+
+.portfolio-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-area .portfolio-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  height: 740px;
+}
+
+.portfolio-area .portfolio-item img {
+  width: 1296px;
+  height: 692px;
+  border-radius: 4px;
+  margin-top: 150px;
+}
+
+.portfolio-item .portfolio-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 540px;
+  height: 420px;
+  padding: 64px;
+  border-radius: 4px;
+  background: #121519;
+  margin-right: 150px;
+  position: relative;
+  bottom: 550px;
+}
+
+.portfolio-item .portfolio-info .title {
+  font-family: Inter;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+}
+
+.portfolio-item .portfolio-info .desc {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #ada6a6;
+}
+
+.portfolio-item .portfolio-info .portfolio-btn button {
+  width:277px;
+  height: 64px;
+  padding: 24px, 40px, 24px, 40px;
+  background: #F57141;
+  color: #FFFFFF;
+  font-family: Plus Jakarta Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  border: none;
+}
+
+.portfolio-item .portfolio-info .portfolio-btn button:hover {
+  width: 280px;
+  height: 65px;
+}
+
+/* book artist */
+.artist-story {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-between;
+  width: 1400px;
+  padding-left: 75px;
+  padding-top: 80px;
+  padding-right: 0px;
+}
+
+.artist-story p {
+  font-family: SF Pro Display;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 45px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #666666;
+  padding-top: 5px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.artist-story h3 {
+  font-family: SF Pro Display;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 77px;
+  letter-spacing: 0em;
+  padding-bottom: 20px;
+  color: #333333;
+  width: 2500px;
+}
+
+.artist-img-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.artist-img {
+  width: 1296px;
+  height: 450px;
+  background: url("/assets/images/artist.png");
+}
+
+.artists-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 1450px;
+  height: 856px;
+  border-radius: 4px;
+  flex-wrap: wrap;
+}
+
+.artists-area .artist-tile img {
+  width: 416px;
+  height: 416px;  
+  border-radius: 4px;
+}
+
+.artists-area .artist-tile {
+  width: 416px;
+  height: 416px;  
+  border-radius: 4px;
+}
+
+.artists-area .artist-tile .overlay {
+  position: relative;
+  bottom: 417px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 416px;
+  height: 416px;  
+  border-radius: 4px;
+  transition: .5s ease;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 180px;
+  padding-bottom: 50px;
+}
+
+.artists-area .artist-tile .overlay .name h3 {
+  font-family: Inter;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-transform: capitalize !important;
+}
+
+.artists-area .artist-tile .overlay .cta button {
+  width:277px;
+  height: 64px;
+  padding: 24px, 40px, 24px, 40px;
+  background: #F57141;
+  color: #FFFFFF;
+  font-family: Plus Jakarta Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  border: none;
+}
+
+.artists-area .artist-tile .overlay .cta button:hover {
+  width:280px;
+  height: 65px;
+}
+
+/* faq */
+.faq-section-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-top: -70px;
+}
+
+.faq-section-box .faq-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 700px;
+  padding-left: 75px;
+}
+
+.faq-section-box .faq-area img {
+  width: 188.52px;
+  height: 220.65px;
+}
+
+.faq-section-box .faq-area h3 {
+  font-family: SF Pro Display;
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0em;
+  padding-bottom: 20px;
+  color: #333333;
+}
+
+.faq-section-box .faq-area p {
+  font-family: SF Pro Display;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  color: #666666;
+}
+
+.faq-section-box .faq-container2 {
+ width: 1200px !important;
+ padding-left: 70px;
+ padding-top: 0px !important;
+}
+
+.faq-section-box .faq-item {
+  padding: 20px 40px 20px 20px;
+  border-bottom: 0.5px solid #000000 !important;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333333 !important;
+  height: 120px;
+}
+
+.faq-section-box .faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-section-box .faq-question {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 34px;
+  letter-spacing: 0px;
+  color: #434A57;
+  -webkit-transition: all ease-in-out 0.3s;
+	-o-transition: all ease-in-out 0.3s;
+	transition: all ease-in-out 0.3s;
+	-moz-transition: all ease-in-out 0.3s;
+}
+
+.faq-section-box .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0px;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: #576071;
+  /* padding: 24px; */
+}
+
+.faq-section-box .faq-answer.active {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.faq-section-box .icon-container i {
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 0.3s;
+	-o-transition: all ease-in-out 0.3s;
+	transition: all ease-in-out 0.3s;
+	-moz-transition: all ease-in-out 0.3s;
+}
+
+.faq-section-box .icon-container i.active {
+  transform: rotate(90deg);
+  color: #F57141;
+  -webkit-transition: all ease-in-out 0.3s;
+	-o-transition: all ease-in-out 0.3s;
+	transition: all ease-in-out 0.3s;
+	-moz-transition: all ease-in-out 0.3s;
+}
+
+.faq-section-box .faq-item .fa-chevron-right {
+  font-size: 15px;
+  color: #434A57;
+  -webkit-transition: all ease-in-out 0.3s;
+	-o-transition: all ease-in-out 0.3s;
+	transition: all ease-in-out 0.3s;
+	-moz-transition: all ease-in-out 0.3s;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+/* .container:hover .overlay {
+  opacity: 1;
+} */
+
+
+
+
+
+
+.artists-area .artist-img-box img{
+  width: 684.76px;
+  height: 700px;
+  border-radius: 4px;
+}
+
+.artists-area .artist-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 300px;
+  height: 400px;
+}
+
+.artists-area .artist-info .name h3 {
+  font-family: SF Pro Display;
+  font-size: 62px;
+  font-weight: 700;
+  line-height: 74px;
+  letter-spacing: 0em;
+  color: #F57141;
+}
+
+.artists-area .artist-info .txt p {
+  font-family: SF Pro Display;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  color: #666666;
+}
+
+.artists-area .artist-info .cta button {
+  width: 277px;
+  height: 64px;
+  padding: 24px, 40px, 24px, 40px;
+  background: #F57141;
+  border: none;
+  color: white;
+  font-family: Plus Jakarta Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.04em;
 }
 
 

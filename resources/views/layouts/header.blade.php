@@ -55,7 +55,7 @@
                             <li class="scroll-to-section"><a href="/" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="/about-us">Our Story</a></li>
                             <li class="scroll-to-section"><a href="/our-services">What We Do</a></li>
-                            <li class="scroll-to-section"><a href="#menu">Portfolio</a></li>
+                            <li class="scroll-to-section"><a href="/our-portfolio">Portfolio</a></li>
                             <li class="scroll-to-section"><a href="#chefs">Blogs</a></li> 
                             <li class="scroll-to-section"><a href="/contact-us">Contact</a></li> 
                         </ul>        
