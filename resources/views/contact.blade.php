@@ -96,7 +96,11 @@
 
 <section class="section" id="">
     <div class="address-area">
-        <div class="map"></div>
+        <div class="map">
+            <div class="location-icon">
+                <img src="{{ asset('assets/images/location.png')}}">
+            </div>
+        </div>
         <div class="map-info">
             <div class="txt-area">
                 <div class="title">DROP BY OUR OFFICE</div><br/>

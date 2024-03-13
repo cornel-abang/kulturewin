@@ -1546,8 +1546,8 @@ footer {
 .address-area .map {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: flex-start;
   width: 1075px;
   height: 407px;
   background: url("/assets/images/map.png");
@@ -1593,6 +1593,12 @@ footer {
   margin-left: 10px;
 }
 
+.map .location-icon {
+  position: relative;
+  right: 190px;
+  top: 140.67px;
+}
+
 .map-info{
   display: flex;
   flex-direction: column;
@@ -1602,7 +1608,7 @@ footer {
   height: 286px;
   background: #F57141;
   align-self: flex-end;
-  margin-right: 310px;
+  margin-right: 290px;
   margin-top: -150px;
   padding: 60px 50px 80px 90px;
 }
