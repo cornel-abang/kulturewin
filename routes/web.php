@@ -36,3 +36,7 @@ Route::get('our-portfolio', function () {
 Route::get('book-artist', function () {
     return view('book-artist');
 });
+
+Route::get('book-artist-form', function () {
+    return view('book-artist-form');
+});
