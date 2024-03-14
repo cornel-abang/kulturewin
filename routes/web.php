@@ -40,3 +40,7 @@ Route::get('book-artist', function () {
 Route::get('book-artist-form', function () {
     return view('book-artist-form');
 });
+
+Route::get('blog', function () {
+    return view('blog-list');
+});
