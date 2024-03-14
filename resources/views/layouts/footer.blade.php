@@ -4,11 +4,11 @@
             <div class="col-lg-12 col-xs-12 footer-area">
                 <div class="footer-logo"><h3>KULTUREWIN</h3></div>
                 <div class="footer-links">
-                    <a href="/">HOME</a>
-                    <a href="#">OUR STORY</a>
-                    <a href="#">WHAT WE DO</a>
-                    <a href="#">BLOGS</a>
-                    <a href="#">CONTACT</a>
+                    <a href="{{ route("home") }}">HOME</a>
+                    <a href="{{ route("about") }}">OUR STORY</a>
+                    <a href="{{ route("services") }}">WHAT WE DO</a>
+                    {{-- <a href="#">BLOGS</a> --}}
+                    <a href="{{ route("contact") }}">CONTACT</a>
                     <a href="#">UPCOMING EVENTS/TICKETS</a>
                 </div>
                 <div class="footer-socials">

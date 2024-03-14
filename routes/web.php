@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FrontendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,34 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::controller(FrontendController::class)->group(function () {
+    Route::get('/', 'showWelcomePage')->name('home');
+    Route::get('about-us', 'showAboutUsPage')->name('about');
+    Route::get('services', 'showOurServicesPage')->name('services');
+    Route::get('contact', 'showContactUsPage')->name('contact');
+    Route::get('portfolio', 'showPortfolioPage')->name('portfolio');
+    Route::get('book/artist', 'showBookArtistPage')->name('book.artist');
+    Route::get('book/artist-form', 'showBookArtistFormPage')->name('book.artist.form');
 });
 
-Route::get('about-us', function () {
-    return view('about');
-});
-
-Route::get('our-services', function () {
-    return view('services');
-});
-
-Route::get('contact-us', function () {
-    return view('contact');
-});
-
-Route::get('our-portfolio', function () {
-    return view('portfolio');
-});
-
-Route::get('book-artist', function () {
-    return view('book-artist');
-});
-
-Route::get('book-artist-form', function () {
-    return view('book-artist-form');
-});
-
-Route::get('blog', function () {
-    return view('blog-list');
-});
+/* 
+    Route::get('blog', function () {
+        return view('blog-list');
+    );
+*/

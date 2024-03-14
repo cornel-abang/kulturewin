@@ -52,12 +52,12 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav" style="margin-left: 60px">
-                            <li class="scroll-to-section"><a href="/" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="/about-us">Our Story</a></li>
-                            <li class="scroll-to-section"><a href="/our-services">What We Do</a></li>
-                            <li class="scroll-to-section"><a href="/our-portfolio">Portfolio</a></li>
-                            <li class="scroll-to-section"><a href="/blog">Blogs</a></li> 
-                            <li class="scroll-to-section"><a href="/contact-us">Contact</a></li> 
+                            <li class="scroll-to-section"><a href="{{ route("home") }}" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="{{ route("about") }}">Our Story</a></li>
+                            <li class="scroll-to-section"><a href="{{ route("services") }}">What We Do</a></li>
+                            <li class="scroll-to-section"><a href="{{ route("portfolio") }}">Portfolio</a></li>
+                            {{-- <li class="scroll-to-section"><a href="/blog">Blogs</a></li>  --}}
+                            <li class="scroll-to-section"><a href="{{ route("contact") }}">Contact</a></li> 
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
