@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <title>Kulturewin - {{ $pageTitle }}</title>
+    <title>Kulturewin | {{ $pageTitle }}</title>
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/owl-carousel.css') }}">
 
     <link rel="stylesheet" href="{{ asset('assets/css/lightbox.css') }}">
+
+    {{-- Favicon --}}
+    <link rel="shortcut icon" href="{{asset('assets/dash/images/favicon.png')}}" />
 
     </head>
     
