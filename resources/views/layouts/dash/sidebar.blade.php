@@ -28,7 +28,7 @@
           </a>
           <div class="collapse" id="ui-basic2">
             <ul class="nav flex-column sub-menu">
-              <li class="nav-item"> <a class="nav-link" href="../pages/ui-features/buttons.html">Create</a></li>
+              <li class="nav-item"> <a class="nav-link" href="{{ route('ticket.create') }}">Create</a></li>
               <li class="nav-item"> <a class="nav-link" href="../pages/ui-features/dropdowns.html">View</a></li>
             </ul>
           </div>

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\TicketController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PortfolioController;
@@ -52,6 +53,17 @@ Route::prefix('dashboard')
         Route::get('event/{id}/edit', 'fetchEvent')->name('event.edit');
         Route::post('event/{id}/edit', 'updateEvent');
         Route::get('event/{id}/delete', 'deleteEvent')->name('event.delete');
+    });
+
+    // Tickekts
+    Route::controller(TicketController::class)
+    ->group(function () {
+        Route::get('ticket/create', 'createTicketForm')->name('ticket.create');
+        Route::post('ticket/create', 'submitTicketForm');
+        Route::get('tickets', 'ticketIndex')->name('ticket.index');
+        Route::get('ticket/{id}/edit', 'fetchTicket')->name('ticket.edit');
+        Route::post('ticket/{id}/edit', 'updateTicket');
+        Route::get('ticket/{id}/delete', 'deleteTicket')->name('ticket.delete');
     });
 
     // Portfolio
