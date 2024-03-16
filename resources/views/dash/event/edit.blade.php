@@ -15,7 +15,7 @@
                   <form class="forms-sample" method="POST" enctype="multipart/form-data" action="">
                     {{ csrf_field() }}
                     <div class="form-group">
-                      <label for="exampleInputUsername1">Evnt title<span>*</span></label>
+                      <label for="exampleInputUsername1">Event title<span>*</span></label>
                       <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Title here" name="title" value="{{ $event->title }}">
                         @if ($errors->has('title'))
                             <small class="invalid-feedback" role="alert">
@@ -33,7 +33,7 @@
                         @endif
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Event image</label>
+                      <label for="exampleInputPassword1">Event image <small>(Must not be above 4MB)</small></label>
                       <input type="file" class="form-control" id="exampleInputPassword1" name="event_image">
                       @if ($errors->has('event_image'))
                             <small class="invalid-feedback" role="alert">

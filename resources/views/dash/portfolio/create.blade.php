@@ -1,4 +1,4 @@
-@include('layouts.dash.header', ['pageTitle' => 'Create events'])
+@include('layouts.dash.header', ['pageTitle' => 'Create portfolio'])
       <!-- partial:../../partials/_sidebar.html -->
       @include('layouts.dash.sidebar')
       <!-- partial -->
@@ -8,14 +8,14 @@
             <div class="grid-margin stretch-card form-area">
               <div class="card">
                 <div class="card-body row">
-                  <h4 class="card-title">Event creation</h4>
+                  <h4 class="card-title">Portfolio creation</h4>
                   <p class="card-description">
-                    Enter event details below..
+                    Enter portfolio details below..
                   </p>
                   <form class="forms-sample" method="POST" enctype="multipart/form-data" action="">
                     {{ csrf_field() }}
                     <div class="form-group">
-                      <label for="exampleInputUsername1">Event title<span>*</span></label>
+                      <label for="exampleInputUsername1">Portfolio title<span>*</span></label>
                       <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Title here" name="title" value="{{old('title')}}">
                         @if ($errors->has('title'))
                             <small class="invalid-feedback" role="alert">
@@ -24,26 +24,26 @@
                         @endif
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Event date<span>*</span></label>
-                      <input type="date" class="form-control" id="exampleInputEmail1" placeholder="Date" name="event_date" value="{{old('event_date')}}"> 
-                      @if ($errors->has('event_date'))
+                      <label for="exampleInputEmail1">YouTube link<span>*</span></label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="YouTube URL" name="youtube_link" value="{{old('youtube_link')}}"> 
+                      @if ($errors->has('youtube_link'))
                             <small class="invalid-feedback" role="alert">
-                            {{ $errors->first('event_date') }}
+                            {{ $errors->first('youtube_link') }}
                             </small>
                         @endif
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Event image<span>*</span> <small>(Must not be above 4MB)</small></label>
-                      <input type="file" class="form-control" id="exampleInputPassword1" name="event_img" value="{{old('event_img')}}">
-                      @if ($errors->has('event_img'))
+                      <label for="exampleInputPassword1">Cover image<span>*</span> <small>(Must not be above 4MB)</small></label>
+                      <input type="file" class="form-control" id="exampleInputPassword1" name="fe_image" value="{{old('fe_image')}}">
+                      @if ($errors->has('fe_image'))
                             <small class="invalid-feedback" role="alert">
-                            {{ $errors->first('event_img') }}
+                            {{ $errors->first('fe_image') }}
                             </small>
                         @endif
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputConfirmPassword1">Event description</label>
-                      <textarea class="form-control form-txt-area" name="description" placeholder="A few words about the event">{{old('description')}}</textarea>
+                      <label for="exampleInputConfirmPassword1">Porfolio description</label>
+                      <textarea class="form-control form-txt-area" name="description" placeholder="A few words about the portfolio">{{old('description')}}</textarea>
                       @if ($errors->has('description'))
                             <small class="invalid-feedback" role="alert">
                             {{ $errors->first('description') }}

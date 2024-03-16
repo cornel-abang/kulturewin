@@ -2,8 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PortfolioController;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,19 +34,37 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('login', 'submitLoginForm');
 });
 
-Route::controller(DashboardController::class)
-->prefix('dashboard')
+Route::prefix('dashboard')
 ->middleware('auth:web')
 ->group(function () {
-    Route::get('/', 'index')->name('dash.index');
-    
+    // Dashboard
+    Route::controller(DashboardController::class)
+    ->group(function () {
+        Route::get('/', 'index')->name('dash.index');
+    });
+
     // Events
-    Route::get('event/create', 'createEventForm')->name('event.create');
-    Route::post('event/create', 'submitEventForm');
-    Route::get('events', 'eventIndex')->name('event.index');
-    Route::get('event/{id}/edit', 'fetchEvent')->name('event.edit');
-    Route::post('event/{id}/edit', 'updateEvent');
-    Route::get('event/{id}/delete', 'deleteEvent')->name('event.delete');
+    Route::controller(EventController::class)
+    ->group(function () {
+        Route::get('event/create', 'createEventForm')->name('event.create');
+        Route::post('event/create', 'submitEventForm');
+        Route::get('events', 'eventIndex')->name('event.index');
+        Route::get('event/{id}/edit', 'fetchEvent')->name('event.edit');
+        Route::post('event/{id}/edit', 'updateEvent');
+        Route::get('event/{id}/delete', 'deleteEvent')->name('event.delete');
+    });
+
+    // Portfolio
+    Route::controller(PortfolioController::class)
+    ->prefix('portfolio')
+    ->group(function () {
+        Route::get('create', 'createPortfolioForm')->name('portfolio.create');
+        Route::post('create', 'submitPortfolioForm');
+        Route::get('portfolio', 'portfolioIndex')->name('portfolio.index');
+        Route::get('{id}/edit', 'fetchPortfolio')->name('portfolio.edit');
+        Route::post('{id}/edit', 'updatePortfolio');
+        Route::get('{id}/delete', 'deletePortfolio')->name('portfolio.delete');
+    });
 });
 
 /* 

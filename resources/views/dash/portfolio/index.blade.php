@@ -1,4 +1,4 @@
-@include('layouts.dash.header', ['pageTitle' => 'All events'])
+@include('layouts.dash.header', ['pageTitle' => 'All portfolio'])
       <!-- partial:../../partials/_sidebar.html -->
       @include('layouts.dash.sidebar')
       <!-- partial -->
@@ -8,12 +8,12 @@
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">KultureWin - events </h4>
+                  <h4 class="card-title">KultureWin - Portfolio </h4>
                   <p class="card-description">
-                    Events found: <code>{{ $events->count() }}</code>
+                    Portfolio found: <code>{{ $portfolio->count() }}</code>
                   </p>
-                  @if (\Session::has('event_created'))
-                    <div class="alert alert-success">Event successfully added</div>
+                  @if (\Session::has('portfolio_created'))
+                    <div class="alert alert-success">Portfolio successfully added</div>
                   @endif
                   @if (\Session::has('event_updated'))
                     <div class="alert alert-success">Event successfully updated</div>
@@ -26,16 +26,13 @@
                       <thead>
                         <tr>
                           <th>
-                            Event
+                            Portfolio
                           </th>
                           <th>
                             Title
                           </th>
                           <th>
-                            Date
-                          </th>
-                          <th>
-                            Tickets sold
+                            YouTube link
                           </th>
                           <th>
                             Action
@@ -43,24 +40,22 @@
                         </tr>
                       </thead>
                       <tbody>
-                        @foreach ($events as $event)
+                        @foreach ($portfolio as $port)
                         <tr>
                             <td class="py-1">
-                              <img src="{{ $event->event_img }}" alt="image" />
+                              <img src="{{ $port->fe_image }}" alt="image" />
                             </td>
                             <td>
-                              {{ $event->title }}
+                              {{ $port->title }}
                             </td>
                             <td>
-                                {{ \Carbon\Carbon::parse($event->event_date)->toFormattedDateString() }}
-                                <span class="label label-info">{{ \Carbon\Carbon::parse($event->event_date)->diffForHumans() }}</span>
+                                <a href="{{ $port->youtube_link }}" target="_blank" data-toggle="tooltip" data-placement="top" title="Click here to watch the video on YouTube">
+                                    {{ $port->youtube_link }}
+                                </a>
                             </td>
                             <td>
-                              800
-                            </td>
-                            <td>
-                              <a href="{{ route('event.edit', $event->id) }}" class="action-btn"><li class="fa fa-edit"></li></a> | 
-                              <a href="{{ route('event.delete', $event->id) }}" class="action-btn del-event-btn"><li class="fa fa-trash"></li></a>
+                              <a href="{{ route('portfolio.edit', $port->id) }}" class="action-btn"><li class="fa fa-edit"></li></a> | 
+                              <a href="{{ route('portfolio.delete', $port->id) }}" class="action-btn del-event-btn"><li class="fa fa-trash"></li></a>
                             </td>
                         </tr>
                         @endforeach
@@ -120,7 +115,6 @@
   <!-- Custom js for this page-->
   <!-- End custom js for this page-->
   <script>
-    $('#table').DataTable();
 
     $(".del-event-btn").click(function(e){
         e.preventDefault();
