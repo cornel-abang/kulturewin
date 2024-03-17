@@ -48,7 +48,7 @@
                             <small class="invalid-feedback" role="alert">
                             {{ $errors->first('description') }}
                             </small>
-                        @endif
+                      @endif
                     </div>
                     <button type="submit" class="btn btn-primary me-2">Submit</button>
                     {{-- <button class="btn btn-light">Cancel</button> --}}

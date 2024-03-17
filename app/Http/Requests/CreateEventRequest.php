@@ -15,16 +15,9 @@ class CreateEventRequest extends FormRequest
     {
         return [
             'title' => 'required|string',
-            'event_date' => 'required|date|after_or_equal:now|size:4096',
+            'event_date' => 'required|date|after_or_equal:now',
             'event_img' => 'required|image',
             'description' => 'required|string',
-        ];
-    }
-
-    public function messages()
-    {
-        return [
-            'event_image.size' => 'The event image must not be above 4MB in size'
         ];
     }
 }

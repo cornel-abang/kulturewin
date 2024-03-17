@@ -1,4 +1,4 @@
-@include('layouts.dash.header', ['pageTitle' => 'All tickets'])
+@include('layouts.dash.header', ['pageTitle' => 'All events'])
       <!-- partial:../../partials/_sidebar.html -->
       @include('layouts.dash.sidebar')
       <!-- partial -->
@@ -8,31 +8,25 @@
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">KultureWin - Event Tickets </h4>
+                  <h4 class="card-title">KultureWin - Onboarded Artists </h4>
                   <p class="card-description">
-                    Tickets found: <code>{{ $tickets->count() }}</code>
+                    Artists found: <code>{{ $artists->count() }}</code>
                   </p>
-                  @if (\Session::has('ticket_created'))
-                    <div class="alert alert-success">Ticket successfully added</div>
-                  @endif
-                  @if (\Session::has('ticket_updated'))
-                    <div class="alert alert-success">Ticket successfully updated</div>
-                  @endif
-                  @if (\Session::has('ticket_deleted'))
-                    <div class="alert alert-danger">Ticket successfully deleted</div>
-                  @endif
                   <div class="table-responsive">
-                    <table class="table table-striped">
+                    <table class="table table-striped" id="artists-table">
                       <thead>
                         <tr>
                           <th>
-                            Event
+                            Artist
                           </th>
                           <th>
-                            Quantity
+                            Fullname
                           </th>
                           <th>
-                            Price <span>&#8358</span>
+                            Email
+                          </th>
+                          <th>
+                            Phone
                           </th>
                           <th>
                             Action
@@ -40,20 +34,23 @@
                         </tr>
                       </thead>
                       <tbody>
-                        @foreach ($tickets as $ticket)
+                        @foreach ($artists as $artist)
                         <tr>
                             <td class="py-1">
-                                {{ $ticket->event->title }}
+                              <img src="{{ $artist->photo }}" alt="{{ $artist->stage_name }}"/>
                             </td>
                             <td>
-                              {{ $ticket->qty }}/0
+                              {{ $artist->full_name }}
                             </td>
                             <td>
-                                {{ number_format($ticket->price) }}/0
+                                {{ $artist->email }}
                             </td>
                             <td>
-                              <a href="{{ route('ticket.edit', $ticket->id) }}" class="action-btn"><li class="fa fa-edit"></li></a> | 
-                              <a href="{{ route('ticket.delete', $ticket->id) }}" class="action-btn del-event-btn"><li class="fa fa-trash"></li></a>
+                                {{ $artist->phone }}
+                            </td>
+                            <td>
+                              <a href="{{ route('event.edit', $artist->id) }}" class="action-btn"><li class="fa fa-eye"></li></a> 
+                              {{-- <a href="{{ route('event.delete', $artist->id) }}" class="action-btn del-event-btn"><li class="fa fa-trash"></li></a> --}}
                             </td>
                         </tr>
                         @endforeach
@@ -113,6 +110,7 @@
   <!-- Custom js for this page-->
   <!-- End custom js for this page-->
   <script>
+    $('#artists-table').DataTable();
 
     $(".del-event-btn").click(function(e){
         e.preventDefault();

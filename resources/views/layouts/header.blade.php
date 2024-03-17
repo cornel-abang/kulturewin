@@ -59,6 +59,7 @@
                             <li class="scroll-to-section"><a href="{{ route("about") }}">Our Story</a></li>
                             <li class="scroll-to-section"><a href="{{ route("services") }}">What We Do</a></li>
                             <li class="scroll-to-section"><a href="{{ route("portfolio") }}">Portfolio</a></li>
+                            <li class="scroll-to-section"><a href="{{ route("artist.onboarding") }}">Onboarding</a></li>
                             {{-- <li class="scroll-to-section"><a href="/blog">Blogs</a></li>  --}}
                             <li class="scroll-to-section"><a href="{{ route("contact") }}">Contact</a></li> 
                         </ul>        

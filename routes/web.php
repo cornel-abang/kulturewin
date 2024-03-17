@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\DashboardController;
@@ -28,6 +29,8 @@ Route::controller(FrontendController::class)->group(function () {
     Route::get('portfolio', 'showPortfolioPage')->name('portfolio');
     Route::get('book/artist', 'showBookArtistPage')->name('book.artist');
     Route::get('book/artist-form', 'showBookArtistFormPage')->name('book.artist.form');
+    Route::get('artist/onboarding', 'showArtistOnboardingFormPage')->name('artist.onboarding');
+    Route::post('artist/onboarding', 'submitArtistOnboardingForm');
 });
 
 Route::controller(AuthController::class)->group(function () {
@@ -76,6 +79,13 @@ Route::prefix('dashboard')
         Route::get('{id}/edit', 'fetchPortfolio')->name('portfolio.edit');
         Route::post('{id}/edit', 'updatePortfolio');
         Route::get('{id}/delete', 'deletePortfolio')->name('portfolio.delete');
+    });
+
+    // Artist
+    Route::controller(ArtistController::class)
+    ->prefix('artist')
+    ->group(function () {
+        Route::get('onboarded', 'artistIndex')->name('artist.index');
     });
 });
 

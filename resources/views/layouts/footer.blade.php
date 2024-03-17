@@ -195,6 +195,16 @@ function increaseBlogItemsCount()
    });
 });
 
+$(".assoc-btn").click(function(){
+    let val = $(this).val();
+
+    if (val === true || val === 'true') {
+        $("#artist-label-field").removeClass('hidden-field');
+    }else{
+        $("#artist-label-field").addClass('hidden-field');
+    }
+});
+
 </script>
 </body>
 </html>
