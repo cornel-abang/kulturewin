@@ -55,4 +55,11 @@ class Artist extends Model
                $this->attributes['middle_name'].' '.
                $this->attributes['last_name'];
     }
+
+    public function isBookedOn(string $date)
+    {
+        return BookArtist::where('artist_id', $this->attributes['id'])
+            ->where('book_date', $date)
+            ->exists();
+    }
 }

@@ -92,7 +92,7 @@
     <!-- ***** Menu Area Starts ***** -->
     <section class="section" id="">
         <div class="faq-container">
-            <a href="">
+            <a href="{{ route('services') }}">
                 <div class="faq-item">
                     <div class="faq-question">Concerts</div>
                     <div class="icon-container">
@@ -103,7 +103,7 @@
             {{-- <div class="faq-answer">
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div> --}}
-            <a href="">
+            <a href="{{ route('services') }}">
                 <div class="faq-item">
                     <div class="faq-question">Production</div>
                     <div class="icon-container">
@@ -114,7 +114,7 @@
             {{-- <div class="faq-answer">
                 <p>To fill the blank elements on the page.</p>
             </div> --}}
-            <a href="">
+            <a href="{{ route('services') }}">
                 <div class="faq-item">
                     <div class="faq-question">Talent Management</div>
                     <div class="icon-container">
@@ -125,7 +125,7 @@
             {{-- <div class="faq-answer">
                 <p>There are many variations of passages of Lorem Ipsum available, but i use lipsum.com.</p>
             </div> --}}
-            <a href="">
+            <a href="{{ route('services') }}">
                 <div class="faq-item">
                     <div class="faq-question">Marketing</div>
                     <div class="icon-container">
@@ -136,7 +136,7 @@
             {{-- <div class="faq-answer">
                 <p>There are many variations of passages of Lorem Ipsum available, but i use lipsum.com.</p>
             </div> --}}
-            <a href="">
+            <a href="{{ route('services') }}">
                 <div class="faq-item">
                     <div class="faq-question">Event Management</div>
                     <div class="icon-container">
@@ -176,7 +176,7 @@
                 <div class="help-img help-img-1"></div>
                 <div class="help-info">
                     <div class="title">Our Story</div>
-                    <a href="">
+                    <a href="{{ route('about') }}">
                         <div class="arrow">
                             <i class="fas fa-long-arrow-right"></i>
                         </div>
@@ -187,18 +187,7 @@
                 <div class="help-img help-img-2"></div>
                 <div class="help-info">
                     <div class="title">Services</div>
-                    <a href="">
-                        <div class="arrow">
-                            <i class="fas fa-long-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="help-menu">
-                <div class="help-img help-img-3"></div>
-                <div class="help-info">
-                    <div class="title">Profile</div>
-                    <a href="">
+                    <a href="{{ route('services') }}">
                         <div class="arrow">
                             <i class="fas fa-long-arrow-right"></i>
                         </div>
@@ -209,7 +198,18 @@
                 <div class="help-img help-img-4"></div>
                 <div class="help-info">
                     <div class="title">Portfolio</div>
-                    <a href="">
+                    <a href="{{ route('portfolio') }}">
+                        <div class="arrow">
+                            <i class="fas fa-long-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="help-menu">
+                <div class="help-img help-img-3"></div>
+                <div class="help-info">
+                    <div class="title">Artists</div>
+                    <a href="{{ route('book.artist')}}">
                         <div class="arrow">
                             <i class="fas fa-long-arrow-right"></i>
                         </div>

@@ -13,7 +13,7 @@
                     Artists found: <code>{{ $artists->count() }}</code>
                   </p>
                   <div class="table-responsive">
-                    <table class="table table-striped" id="artists-table">
+                    <table class="table table-bordered" id="artists-table">
                       <thead>
                         <tr>
                           <th>
@@ -164,7 +164,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary close" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                {{-- <button type="button" class="btn btn-primary">Save changes</button> --}}
               </div>
             </div>
           </div>

@@ -33,7 +33,7 @@
                         @endif
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Cover image <small>(Must not be above 4MB)</small></label>
+                      <label for="exampleInputPassword1">Cover image <small>(Must not be above 4MB & Dim: 1296px x 692px)</small></label>
                       <input type="file" class="form-control" id="exampleInputPassword1" name="fe_image">
                       @if ($errors->has('fe_image'))
                             <small class="invalid-feedback" role="alert">

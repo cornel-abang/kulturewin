@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Requests\OnboardArtistRequest;
 use App\Models\Artist;
+use App\Models\Portfolio;
+use Illuminate\Http\Request;
+use App\Http\Requests\BookArtistRequest;
+use App\Http\Requests\OnboardArtistRequest;
+use App\Models\BookArtist;
 
 class FrontendController extends Controller
 {
@@ -30,17 +33,23 @@ class FrontendController extends Controller
 
     public function showPortfolioPage()
     {
-        return view('portfolio');
+        $portfolios = Portfolio::all();
+
+        return view('portfolio', compact('portfolios'));
     }
 
     public function showBookArtistPage()
     {
-        return view('book-artist');
+        $artists = Artist::all();
+
+        return view('book-artist', compact('artists'));
     }
 
-    public function showBookArtistFormPage()
+    public function showBookArtistFormPage(int $id)
     {
-        return view('book-artist-form');
+        $artist = Artist::find($id);
+
+        return view('book-artist-form', compact('artist'));
     }
 
     public function showArtistOnboardingFormPage()
@@ -58,5 +67,26 @@ class FrontendController extends Controller
         session()->flash('artist_onboarded', true);
 
         return redirect()->back();
+    }
+
+    public function submitBookArtistForm(BookArtistRequest $request)
+    {
+        if ($this->artistIsBooked($request->artist_id, $request->book_date)) {
+            return redirect()->back()
+                ->withInput($request->validated())
+                ->withErrors(['book_date' => 'Artist is already booked on this date']);
+        }
+
+        BookArtist::create($request->validated());
+
+        session()->flash('artist_booked', true);
+
+        return redirect()->back();
+    }
+
+    public function artistIsBooked(int $id, string $date)
+    {
+        return Artist::find($id)->isBookedOn($date);
+
     }
 }

@@ -9,8 +9,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('tickets', function (Blueprint $table) {
-            $table->foreignId('ticket_id')->change();
-            $table->foreign('ticket_id')->references('id')->on('tickets')->onDelete('cascade')->onUpdate('no action');
+            $table->foreignId('event_id')->change();
+            $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade')->onUpdate('no action');
         });
     }
 

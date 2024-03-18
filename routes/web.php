@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FAQController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\ArtistController;
@@ -28,7 +29,8 @@ Route::controller(FrontendController::class)->group(function () {
     Route::get('contact', 'showContactUsPage')->name('contact');
     Route::get('portfolio', 'showPortfolioPage')->name('portfolio');
     Route::get('book/artist', 'showBookArtistPage')->name('book.artist');
-    Route::get('book/artist-form', 'showBookArtistFormPage')->name('book.artist.form');
+    Route::get('book/artist/{id}', 'showBookArtistFormPage')->name('book.artist.form');
+    Route::post('book/artist/{id}', 'submitBookArtistForm');
     Route::get('artist/onboarding', 'showArtistOnboardingFormPage')->name('artist.onboarding');
     Route::post('artist/onboarding', 'submitArtistOnboardingForm');
 });
@@ -89,6 +91,20 @@ Route::prefix('dashboard')
     ->group(function () {
         Route::get('onboarded', 'artistIndex')->name('artist.index');
         Route::get('onboarded/{id}', 'getArtist')->name('artist.fetch');
+        Route::get('booked', 'getBookedArtists')->name('artist.booked');
+        Route::get('booking/{id}', 'getBooking')->name('booking.fetch');
+    });
+
+    // FAQ
+    Route::controller(FAQController::class)
+    ->prefix('faq')
+    ->group(function () {
+        Route::get('create', 'createFAQForm')->name('faq.create');
+        Route::post('create', 'submitCreateFAQForm');
+        Route::get('all', 'allFAQ')->name('faq.index');
+        Route::get('{id}/edit', 'fetchFAQ')->name('faq.edit');
+        Route::post('{id}/edit', 'updateFAQ');
+        Route::get('{id}', 'deleteFAQ')->name('faq.delete');
     });
 });
 

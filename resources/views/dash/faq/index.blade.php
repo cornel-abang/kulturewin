@@ -1,4 +1,4 @@
-@include('layouts.dash.header', ['pageTitle' => 'All events'])
+@include('layouts.dash.header', ['pageTitle' => 'Booked artist'])
       <!-- partial:../../partials/_sidebar.html -->
       @include('layouts.dash.sidebar')
       <!-- partial -->
@@ -8,47 +8,28 @@
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">KultureWin - events </h4>
+                  <h4 class="card-title">KultureWin - FAQs </h4>
                   <p class="card-description">
-                    Events found: <code>{{ $events->count() }}</code>
+                    FAQs artists found: <code>{{ $faqs->count() }}</code>
                   </p>
-                  @if (\Session::has('event_created'))
-                    <div class="alert alert-success">Event successfully added</div>
+                  @if (\Session::has('faq_created'))
+                    <div class="alert alert-success">FAQ successfully added</div>
                   @endif
-                  @if (\Session::has('event_updated'))
-                    <div class="alert alert-success">Event successfully updated</div>
+                  @if (\Session::has('faq_edited'))
+                    <div class="alert alert-success">FAQ successfully edited</div>
                   @endif
-                  @if (\Session::has('event_deleted'))
-                    <div class="alert alert-danger">Event successfully deleted</div>
-                  @endif
-                  @if (\Session::has('ticket_sales_stopped'))
-                    <div class="alert alert-success">Tickets sales successfully stopped</div>
-                  @endif
-                  @if (\Session::has('ticket_put_sale'))
-                    <div class="alert alert-success">Tickets successfully put on sales</div>
+                  @if (\Session::has('faq_deleted'))
+                    <div class="alert alert-danger">FAQ deleted</div>
                   @endif
                   <div class="table-responsive">
                     <table class="table table-bordered">
                       <thead>
                         <tr>
                           <th>
-                            Event
+                            Question
                           </th>
                           <th>
-                            Title
-                          </th>
-                          <th>
-                            Date
-                          </th>
-                          <th>
-                            Tickets on sale?
-                          </th>
-                          <th>
-                            Tickets sold
-                          </th>
-                          <th>Exp. sales (&#8358;)</th>
-                          <th>
-                            Total amount sold (&#8358;)
+                            Answer
                           </th>
                           <th>
                             Action
@@ -56,34 +37,21 @@
                         </tr>
                       </thead>
                       <tbody>
-                        @foreach ($events as $event)
+                        @foreach ($faqs as $faq)
+                        
                         <tr>
-                            <td class="py-1">
-                              <img src="{{ $event->event_img }}" alt="image" />
+                            <td>
+                              {{ $faq->question }}
                             </td>
                             <td>
-                              {{ $event->title }}
+                                {{ \Illuminate\Support\Str::limit($faq->answer, 50, $end='...') }}
                             </td>
-                            <td>
-                                {{ \Carbon\Carbon::parse($event->event_date)->toFormattedDateString() }}
-                                <span class="label label-info">{{ \Carbon\Carbon::parse($event->event_date)->diffForHumans() }}</span>
-                            </td>
-                            <td>
-                              {!! $event->tickets_on_sale ? 'Yes':'No ' !!} - 
-                              <i>
-                                <a href="{{ $event->tickets_on_sale ? route('event.stopSale', $event->id ) : route('event.putOnSale', $event->id ) }}" class="on-sale-btn">
-                                  {!! $event->tickets_on_sale ? 'stop sale':'put on sale' !!}
-                                </a>
-                              </i>
-                            </td>
-                            <td>
-                              {{ $event->ticketsAlloted() }} / {{ $event->ticketsSold() }} {!! $event->isSoldOut() ? '<small class="sold-out">Sold out</small>':'' !!}
-                            </td>
-                            <td> {{ number_format($event->amountSold()) }}</td>
-                            <td> {{ number_format($event->expecetedSales()) }}</td>
-                            <td>
-                              <a href="{{ route('event.edit', $event->id) }}" class="action-btn"><li class="fa fa-edit"></li></a> | 
-                              <a href="{{ route('event.delete', $event->id) }}" class="action-btn del-event-btn"><li class="fa fa-trash"></li></a> 
+                            <td class="action-area">
+                              <a href="#" class="booking-action-btn action-btn" data-view-answer="{{  $faq->answer }}" data-view-question="{{  $faq->question }}">
+                                <li class="fa fa-eye"></li>
+                              </a> | 
+                              <a href="{{ route('faq.edit', $faq->id) }}" class="action-btn"><li class="fa fa-edit"></li></a> | 
+                              <a href="{{ route('faq.delete', $faq->id) }}" class="action-btn del-faq-btn"><li class="fa fa-trash"></li></a>
                             </td>
                         </tr>
                         @endforeach
@@ -95,6 +63,29 @@
             </div>
           </div>
         </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">FAQ Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <h4>FAQ Question: </h4> 
+                    <p id="f-question"></p><br/><br/>
+
+                    <h4>FAQ Answer: </h4> 
+                    <p id="f-answer"></p><br/><br/>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary close" data-dismiss="modal">Close</button>
+                  {{-- <button type="button" class="btn btn-primary">Save changes</button> --}}
+                </div>
+              </div>
+            </div>
+          </div>
         <!-- content-wrapper ends -->
         <!-- partial:../../partials/_footer.html -->
         <footer class="footer">
@@ -114,23 +105,38 @@
     a.action-btn {
         color: black;
     }
-    small.sold-out {
-      background: green;
-      color: white;
-      font-weight: bolder;
-      font-size: 8px;
-      padding: 2px;
-      border-radius: 3px;
+    .label-info {
+        color: white;
+        background: #F57141;
+        border-radius: 10px;
+        padding: 5px;
+        font-size: 10px;
+        font-weight: bold;
     }
-
-    td a.on-sale-btn {
-      text-decoration: none;
-      color: black;
+    a.action-btn {
+        color: black;
     }
-
-    td a.on-sale-btn:hover {
-      border-bottom: 1px solid #F57141;
+    .modal-content {
+      width: 800px!important;
     }
+    .profile-area {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 320px;
+    }
+    .profile-area .profile-pic {
+      border-radius: 20px!important;
+      height: 100px;
+      width: 100px;
+    }
+   .action-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+   }
   </style>
 </footer>
         <!-- partial -->
@@ -160,7 +166,6 @@
   <!-- Custom js for this page-->
   <!-- End custom js for this page-->
   <script>
-    // $('#table').DataTable();
 
     $(".del-event-btn").click(function(e){
         e.preventDefault();
@@ -172,7 +177,21 @@
         }
     });
 
-    $(".on-sale-btn").click(function(e){
+    $(".booking-action-btn").click(function(){
+      let question = $(this).data('view-question');
+      let answer = $(this).data('view-answer');
+
+      $('#f-question').text(question)
+      $('#f-answer').text(answer)
+
+      $('#exampleModal').modal('show');
+    });
+
+    $(".close").click(function(){
+      $('#exampleModal').modal('hide');
+    });
+
+    $(".del-faq-btn").click(function(e){
         e.preventDefault();
 
         let location = $(this).attr('href');
@@ -181,6 +200,7 @@
             window.location.href = location;
         }
     });
+
   </script>
 </body>
 

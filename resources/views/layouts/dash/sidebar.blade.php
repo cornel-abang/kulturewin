@@ -57,6 +57,22 @@
         <div class="collapse" id="charts">
           <ul class="nav flex-column sub-menu">
             <li class="nav-item"> <a class="nav-link" href="{{ route('artist.index') }}">Onboarded</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ route('artist.booked') }}">Booked</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item nav-category">FAQ</li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="collapse" href="#form-elements2" aria-expanded="false"
+          aria-controls="form-elements2">
+          <i class="menu-icon mdi mdi-card-text-outline"></i>
+          <span class="menu-title">FAQ</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="form-elements2">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"><a class="nav-link" href="{{ route('faq.create') }}">Create</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('portfolio.index') }}">View</a></li>
           </ul>
         </div>
       </li>

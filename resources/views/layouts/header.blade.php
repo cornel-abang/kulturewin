@@ -55,13 +55,13 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav" style="margin-left: 60px">
-                            <li class="scroll-to-section"><a href="{{ route("home") }}" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="{{ route("about") }}">Our Story</a></li>
-                            <li class="scroll-to-section"><a href="{{ route("services") }}">What We Do</a></li>
-                            <li class="scroll-to-section"><a href="{{ route("portfolio") }}">Portfolio</a></li>
-                            <li class="scroll-to-section"><a href="{{ route("artist.onboarding") }}">Onboarding</a></li>
+                            <li class="scroll-to-section"><a href="{{ route("home") }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
+                            <li class="scroll-to-section"><a href="{{ route("about") }}" class="{{ request()->routeIs('about') ? 'active' : '' }}">Our Story</a></li>
+                            <li class="scroll-to-section"><a href="{{ route("services") }}" class="{{ request()->routeIs('services') ? 'active' : '' }}">What We Do</a></li>
+                            <li class="scroll-to-section"><a href="{{ route("portfolio") }}" class="{{ request()->routeIs('portfolio') ? 'active' : '' }}">Portfolio</a></li>
+                            {{-- <li class="scroll-to-section"><a href="{{ route("artist.onboarding") }}">Onboarding</a></li> --}}
                             {{-- <li class="scroll-to-section"><a href="/blog">Blogs</a></li>  --}}
-                            <li class="scroll-to-section"><a href="{{ route("contact") }}">Contact</a></li> 
+                            <li class="scroll-to-section"><a href="{{ route("contact") }}" class="{{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a></li> 
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>

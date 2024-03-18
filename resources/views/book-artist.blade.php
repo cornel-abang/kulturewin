@@ -16,39 +16,19 @@
 </section>
 
 <section class="section artists-area" id="">
+    @foreach ($artists as $artist)
     <div class="artist-tile">
-        <img src="{{ asset('assets/images/person1.png')}}">
+        <img src="{{ $artist->photo }}">
         <div class="overlay">
             <div class="name">
-                <h3>CHIKE MUNA</h3>
+                <h3>{{ $artist->stage_name }}</h3>
             </div>
             <div class="cta">
-                <button>BOOK ARTIST</button>
+                <button onclick="window.location.href='{{ route('book.artist.form', $artist->id) }}'">BOOK ARTIST</button>
             </div>
         </div>
     </div>
-    <div class="artist-tile">
-        <img src="{{ asset('assets/images/person2.png')}}">
-        <div class="overlay">
-            <div class="name">
-                <h3>ADE KING</h3>
-            </div>
-            <div class="cta">
-                <button>BOOK ARTIST</button>
-            </div>
-        </div>
-    </div>
-    <div class="artist-tile">
-        <img src="{{ asset('assets/images/person3.png')}}">
-        <div class="overlay">
-            <div class="name">
-                <h3>PAUL STYLES</h3>
-            </div>
-            <div class="cta">
-                <button>BOOK ARTIST</button>
-            </div>
-        </div>
-    </div>
+    @endforeach
 </section>
 
 @include('layouts.faqs')

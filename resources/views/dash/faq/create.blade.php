@@ -1,4 +1,4 @@
-@include('layouts.dash.header', ['pageTitle' => 'Create portfolio'])
+@include('layouts.dash.header', ['pageTitle' => 'Create FAQ'])
       <!-- partial:../../partials/_sidebar.html -->
       @include('layouts.dash.sidebar')
       <!-- partial -->
@@ -8,49 +8,31 @@
             <div class="grid-margin stretch-card form-area">
               <div class="card">
                 <div class="card-body row">
-                  <h4 class="card-title">Portfolio creation</h4>
+                  <h4 class="card-title">FAQ creation</h4>
                   <p class="card-description">
-                    Enter portfolio details below..
+                    Enter FAQ details below..
                   </p>
-                  <form class="forms-sample" method="POST" enctype="multipart/form-data" action="">
+                  <form class="forms-sample" method="POST" action="">
                     {{ csrf_field() }}
                     <div class="form-group">
-                      <label for="exampleInputUsername1">Portfolio title<span>*</span></label>
-                      <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Title here" name="title" value="{{old('title')}}">
-                        @if ($errors->has('title'))
+                      <label for="exampleInputUsername1">FAQ Question<span>*</span></label>
+                      <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Type question here.." name="question" value="{{old('question')}}">
+                        @if ($errors->has('question'))
                             <small class="invalid-feedback" role="alert">
-                            {{ $errors->first('title') }}
+                            {{ $errors->first('question') }}
                             </small>
                         @endif
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputEmail1">YouTube link<span>*</span></label>
-                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="YouTube URL" name="youtube_link" value="{{old('youtube_link')}}"> 
-                      @if ($errors->has('youtube_link'))
+                      <label for="exampleInputConfirmPassword1">FAQ Answer</label>
+                      <textarea class="form-control form-txt-area" name="answer" placeholder="Type answer here..">{{old('answer')}}</textarea>
+                      @if ($errors->has('answer'))
                             <small class="invalid-feedback" role="alert">
-                            {{ $errors->first('youtube_link') }}
+                            {{ $errors->first('answer') }}
                             </small>
                         @endif
                     </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Cover image<span>*</span> <small>(Must not be above 4MB & Dim: 1296px x 692px)</small></label>
-                      <input type="file" class="form-control" id="exampleInputPassword1" name="fe_image" value="{{old('fe_image')}}">
-                      @if ($errors->has('fe_image'))
-                            <small class="invalid-feedback" role="alert">
-                            {{ $errors->first('fe_image') }}
-                            </small>
-                        @endif
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputConfirmPassword1">Porfolio description</label>
-                      <textarea class="form-control form-txt-area" name="description" placeholder="A few words about the portfolio">{{old('description')}}</textarea>
-                      @if ($errors->has('description'))
-                            <small class="invalid-feedback" role="alert">
-                            {{ $errors->first('description') }}
-                            </small>
-                        @endif
-                    </div>
-                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    <button type="submit" class="btn btn-primary me-2">Create</button>
                     {{-- <button class="btn btn-light">Cancel</button> --}}
                   </form>
                 </div>

@@ -22,7 +22,7 @@
                     <div class="alert alert-danger">Ticket successfully deleted</div>
                   @endif
                   <div class="table-responsive">
-                    <table class="table table-striped">
+                    <table class="table table-bordered">
                       <thead>
                         <tr>
                           <th>
@@ -32,7 +32,7 @@
                             Quantity
                           </th>
                           <th>
-                            Price <span>&#8358</span>
+                            Unit Price <span>&#8358</span>
                           </th>
                           <th>
                             Action

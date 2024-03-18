@@ -16,39 +16,22 @@
     <div class="portfolio-img"></div>
 </section>
 
+@foreach ($portfolios as $portfolio)
 <section class="section portfolio-area" id="">
     <div class="portfolio-item" style="margin-top: 300px">
-        <img src="{{ asset('assets/images/party.jpg')}}">
+        <img src="{{ $portfolio->fe_image }}">
         <div class="portfolio-info">
-            <div class="title">boo of the booless party</div>
+            <div class="title">{{ $portfolio->title }}</div>
             <div class="desc">
-                Ut sit at orci cursus gravida pretium proin nulla id purus, placerat eget mauris eu ac volutpat facilisi eget morbi ullamcorper turpis 
-                nisi aconsequat cursus malesuada leo ultrices nisl dictumst turpis tortor sem amet, 
-                euismod aliquam, lacus laoreet dui facilisi morbi ullamcorper turpis nisi aconsequat cursus
+                {{ $portfolio->description }}
             </div><br/>
-            <div class="portfolio-btn">
+            <div class="portfolio-btn" onclick="window.location.href='{{ $portfolio->youtube_link }}'">
                 <button class="">VIEW MORE</button>
             </div>
         </div>
     </div>
-</section>
-
-<section class="section portfolio-area" id="">
-    <div class="portfolio-item">
-        <img src="{{ asset('assets/images/party2.jpg')}}">
-        <div class="portfolio-info">
-            <div class="title">A Night in Lagos</div>
-            <div class="desc">
-                Ut sit at orci cursus gravida pretium proin nulla id purus, placerat eget mauris eu ac volutpat facilisi eget morbi ullamcorper turpis 
-                nisi aconsequat cursus malesuada leo ultrices nisl dictumst turpis tortor sem amet, 
-                euismod aliquam, lacus laoreet dui facilisi morbi ullamcorper turpis nisi aconsequat cursus
-            </div><br/>
-            <div class="portfolio-btn">
-                <button class="">VIEW MORE</button>
-            </div>
-        </div>
-    </div>
-</section>
+</section>   
+@endforeach
 
 <!-- ***** Upcoming Events Starts ***** -->
 @include('layouts.events')

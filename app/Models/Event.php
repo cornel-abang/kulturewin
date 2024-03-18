@@ -24,33 +24,35 @@ class Event extends Model
         'event_img', 'description'
     ];
 
-    protected $with = ['tickets'];
+    protected $with = ['ticket'];
 
-    public function tickets()
+    public function ticket()
     {
-        return $this->hasMany(Ticket::class);
+        return $this->hasOne(Ticket::class);
     }
 
     public function ticketsAlloted()
     {
-        return $this->tickets->count();
+        return $this->ticket->qty;
     }
 
     public function ticketsSold()
     {
-        return $this->tickets->filter(function($ticket)
-        {
-          return $ticket->sold_amount == $ticket->qty;
-        });
+        return $this->ticket->sold_amount ?? 0;
     }
 
     public function amountSold()
     {
-        return $this->ticketsSold()->sum('price');
+        return $this->ticketsSold() * $this->ticket->price;
     }
 
     public function isSoldOut()
     {
-        return $this->ticketsAlloted() == $this->ticketsSold()->count() ? true:false;
+        return $this->ticketsAlloted() == $this->ticketsSold() ? true:false;
+    }
+
+    public function expecetedSales()
+    {
+        return $this->ticket->price * $this->ticket->qty;
     }
 }

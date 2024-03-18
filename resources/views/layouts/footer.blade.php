@@ -4,28 +4,28 @@
             <div class="col-lg-12 col-xs-12 footer-area">
                 <div class="footer-logo"><h3>KULTUREWIN</h3></div>
                 <div class="footer-links">
-                    <a href="{{ route("home") }}">HOME</a>
-                    <a href="{{ route("about") }}">OUR STORY</a>
-                    <a href="{{ route("services") }}">WHAT WE DO</a>
+                    <a href="{{ route("home") }}"  class="{{ request()->routeIs('home') ? 'active' : '' }}">HOME</a>
+                    <a href="{{ route("about") }}"  class="{{ request()->routeIs('about') ? 'active' : '' }}">OUR STORY</a>
+                    <a href="{{ route("services") }}" class="{{ request()->routeIs('services') ? 'active' : '' }}">WHAT WE DO</a>
                     {{-- <a href="#">BLOGS</a> --}}
-                    <a href="{{ route("contact") }}">CONTACT</a>
+                    <a href="{{ route("contact") }}" class="{{ request()->routeIs('contact') ? 'active' : '' }}">CONTACT</a>
                     <a href="#">UPCOMING EVENTS/TICKETS</a>
                 </div>
                 <div class="footer-socials">
                     <div class="social-icon">
-                        <i class="fa fa-instagram"></i>
+                        <a href="https://www.instagram.com/kulturewin?igsh=MWg2ZTZzeGlydDJkZA=="><i class="fa fa-instagram"></i></a>
                     </div>
                     <div class="social-icon">
-                        <i class="fa fa-facebook"></i>
+                        <a href="https://www.facebook.com/share/Z859kmp6S3WFRNmv/?mibextid=WC7FNe"><i class="fa fa-facebook"></i></a>
                     </div>
                     <div class="social-icon">
-                        <i class="fa fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/kulture-win-0799a62ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fa fa-linkedin"></i></a>
                     </div>
                     <div class="social-icon">
-                        <i class="fa fa-twitter"></i>
+                        <a href="https://x.com/kulturewin?s=21"><i class="fa fa-twitter"></i></a>
                     </div>
                     <div class="social-icon">
-                        <i class="fa fa-youtube-play"></i>
+                        <a href="https://www.youtube.com/@kulturewin"><i class="fa fa-youtube-play"></i></a>
                     </div>
                 </div>
                 <div class="footer-info-txt">
@@ -153,47 +153,6 @@ function increaseBlogItemsCount()
     let blogCount = $(".blog-area").data("postcount");
     $(".blog-area").data("postcount", Number(blogCount) + 1);
 }
-
-// Accordion
- const faqItems = document.querySelectorAll('.faq-item');
-
- faqItems.forEach(item => {
-   const question = item.querySelector('.faq-question');
-   const answer = item.nextElementSibling;
-   const icon = item.querySelector('i');
-
-   item.addEventListener('click', (e) => {
-    e.preventDefault();
-
-     faqItems.forEach(otherItem => {
-       if (otherItem !== item) {
-         const otherAnswer = otherItem.nextElementSibling;
-        const otherIcon = otherItem.querySelector('i');
-
-        otherAnswer.classList.remove('active');
-         otherIcon.classList.remove('active');
-         otherAnswer.style.maxHeight = "0";
-       }
-     });
-
-     answer.classList.toggle('active');
-    icon.classList.toggle('active');
-     if (answer.classList.contains('active')) {
-        console.log(answer);
-       answer.style.maxHeight = answer.scrollHeight + "px";
-       answer.style.paddingBottom = "50px";
-       answer.style.paddingTop = "20px";
-       question.style.color = "#F57141";
-       item.style.borderBottom = "none";
-     } else {
-       answer.style.maxHeight = "0";
-       answer.style.paddingBottom = "0px";
-       answer.style.paddingTop = "0px";
-       question.style.color = "#434A57";
-       item.style.borderBottom = "0.5px solid #000000 !important";
-     }
-   });
-});
 
 $(".assoc-btn").click(function(){
     let val = $(this).val();
