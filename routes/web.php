@@ -35,7 +35,7 @@ Route::controller(FrontendController::class)->group(function () {
     Route::post('artist/onboarding', 'submitArtistOnboardingForm');
     Route::get('event/{id}/ticket', 'buyEventTicket')->name('ticket.get');
     Route::get('event/{id}', 'getEvent')->name('event.get');
-    Route::post('event/pay', 'initiatePayment')->name('event.pay');
+    Route::post('event/pay', 'redirectToGateway')->name('event.pay');
 });
 
 Route::controller(AuthController::class)->group(function () {

@@ -16,7 +16,7 @@
                         </div>
                         <div class="hero-play-vid">
                             <div>
-                                <a rel="nofollow" href="http://youtube.com"><i class="fa fa-play"></i></a>
+                                <a rel="nofollow" href="#"><i class="fa fa-play"></i></a>
                             </div>
                         </div>
                     </div>
@@ -221,7 +221,7 @@
     <!-- ***** Menu Area Ends ***** -->
 
     <!-- ***** Menu Area Starts ***** -->
-    <section class="section" id="">
+    {{-- <section class="section" id="">
         <div class="blog-area" data-postcount="0" data-postconstcount="null">
             <h3>Blog</h3>
             <div class="blog-txt-ara">
@@ -233,10 +233,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- ***** Menu Area Starts ***** -->
-    <section class="section" id="">
+    {{-- <section class="section" id="">
         <div class="blog-menu-area">
             <div class="blog-menu">
                 <div class="blog-img blog-img-1"></div>
@@ -309,7 +309,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- ***** Menu Area Ends ***** -->
 
     <!-- ***** Upcoming Events Starts ***** -->

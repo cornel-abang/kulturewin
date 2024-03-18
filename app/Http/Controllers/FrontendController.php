@@ -99,7 +99,7 @@ class FrontendController extends Controller
         return response()->json(compact('event'));
     }
 
-    public function initiatePayment(PayForTicketRequest $request)
+    public function redirectToGateway(PayForTicketRequest $request)
     {
         //
     }
