@@ -43,6 +43,10 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('login', 'submitLoginForm');
 });
 
+Route::controller(AuthController::class)->middleware('auth:web')->group(function () {
+    Route::get('logout', 'logUserOut')->name('logout');
+});
+
 Route::prefix('dashboard')
 ->middleware('auth:web')
 ->group(function () {
