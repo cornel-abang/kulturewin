@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
 use App\Models\Artist;
 use App\Models\Portfolio;
+use App\Models\BookArtist;
 use Illuminate\Http\Request;
 use App\Http\Requests\BookArtistRequest;
+use App\Http\Requests\PayForTicketRequest;
 use App\Http\Requests\OnboardArtistRequest;
-use App\Models\BookArtist;
-use App\Models\Event;
 
 class FrontendController extends Controller
 {
@@ -91,8 +92,15 @@ class FrontendController extends Controller
 
     }
 
-    public function buyEventTicket(int $id)
+    public function getEvent(int $id)
     {
         $event = Event::find($id);
+
+        return response()->json(compact('event'));
+    }
+
+    public function initiatePayment(PayForTicketRequest $request)
+    {
+        //
     }
 }

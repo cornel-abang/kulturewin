@@ -174,6 +174,63 @@ $(document).ready(function(){
     });
 });
 
+$(".book-ticket-btn").click(function(e){
+    e.preventDefault();
+
+      let eventID = $(this).data('id');
+      let url = $(this).attr('href');
+
+      $.ajax({
+        url: url,
+        type: 'GET',
+        headers: {
+          'Accept': 'application/json' // Specify the desired Accept header value
+        },
+      success: function(response) {
+        fillModalWith(response.event)
+      },
+      error: function(xhr, status, error) {
+        console.log(xhr, status, error);
+      }
+    });
+
+      $('#exampleModal').modal('show');
+    });
+
+    $(".close").click(function(){
+      $('#exampleModal').modal('hide');
+    });
+
+    $("#ticket-qty").on("change", function() {
+        var maxValue = parseInt($(this).attr('max'));
+        var enteredValue = parseInt($(this).val());
+        
+        if (enteredValue > maxValue) {
+            $(this).val(maxValue);
+            alert('Only '+ maxValue +'ticket(s) remaining');
+        }
+
+        let price = parseInt($("#unit-price").val());
+        let qty = parseInt($(this).val());
+        let totalAmount = price * qty;
+
+        $("#ticket-amount").val(totalAmount);
+    });
+
+    $(".pay-event-btn").click(function(){
+      $('#buy-ticket-form').submit();
+    });
+
+    function fillModalWith(event)
+    {
+        // console.log($('#unit-price').val(), event.ticket.price);
+        $('#event').val(event.title);
+        $('#unit-price').val(event.ticket.price);
+        $('#event-id').val(event.id);
+        $('#event-title').text(event.title);
+        $("#ticket-qty").attr('max', event.ticket.qty);
+    }
+
 </script>
 </body>
 </html>
