@@ -67,4 +67,26 @@ class EventController extends Controller
 
         return redirect()->route('event.index');
     }
+
+    public function stopTicketSale(int $id)
+    {
+        $event = Event::find($id);
+        $event->tickets_on_sale = false;
+        $event->save();
+
+        session()->flash('ticket_sales_stopped', true);
+
+        return redirect()->back();
+    }
+    
+    public function putTicketOnSale(int $id)
+    {
+        $event = Event::find($id);
+        $event->tickets_on_sale = true;
+        $event->save();
+
+        session()->flash('ticket_put_sale', true);
+
+        return redirect()->back();
+    }
 }

@@ -56,6 +56,8 @@ Route::prefix('dashboard')
         Route::get('event/{id}/edit', 'fetchEvent')->name('event.edit');
         Route::post('event/{id}/edit', 'updateEvent');
         Route::get('event/{id}/delete', 'deleteEvent')->name('event.delete');
+        Route::get('ticket/{id}/stop-sale', 'stopTicketSale')->name('event.stopSale');
+        Route::get('ticket/{id}/put-on-sale', 'putTicketOnSale')->name('event.putOnSale');
     });
 
     // Tickekts
@@ -86,6 +88,7 @@ Route::prefix('dashboard')
     ->prefix('artist')
     ->group(function () {
         Route::get('onboarded', 'artistIndex')->name('artist.index');
+        Route::get('onboarded/{id}', 'getArtist')->name('artist.fetch');
     });
 });
 

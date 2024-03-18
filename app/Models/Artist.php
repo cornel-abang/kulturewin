@@ -26,6 +26,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string|null $youtube
  * @property string|null $facebook
  * @property string|null $twitter
+ * @property string|null $instagram
  * @property string|null $songs_url
  * @property string $photo
  * @property CarbonInterface $created_at

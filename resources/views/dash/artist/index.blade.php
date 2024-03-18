@@ -49,7 +49,7 @@
                                 {{ $artist->phone }}
                             </td>
                             <td>
-                              <a href="{{ route('event.edit', $artist->id) }}" class="action-btn"><li class="fa fa-eye"></li></a> 
+                              <a href="#" class="action-btn" data-toggle="modal" data-target="#exampleModal" data-view-url="{{ route('artist.fetch', $artist->id)}}"><li class="fa fa-eye"></li></a> 
                               {{-- <a href="{{ route('event.delete', $artist->id) }}" class="action-btn del-event-btn"><li class="fa fa-trash"></li></a> --}}
                             </td>
                         </tr>
@@ -58,6 +58,113 @@
                     </table>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="profile-area">
+                  <img src="" alt="image" id="profilePhoto" class="img-sm profile-pic">
+                  <h5 class="modal-title" id="exampleModalLabel">MTitle</h5>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <table class="table table-bordered">
+                  <tr>
+                    <th scope="row">First Name</th>
+                    <td id="f_name">Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">last Name</th>
+                    <td id="l_name">Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Middle Name</th>
+                    <td id="m_name">Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Stage Name</th>
+                    <td id="s_name">Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Email</th>
+                    <td id="a-email">Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Phone</th>
+                    <td id="a-phone">Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Date of Birth</th>
+                    <td id="a-dob">Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Street address</th>
+                    <td id="a-street">Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">City</th>
+                    <td id="a-city">Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">State</th>
+                    <td id="a-state">Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Country</th>
+                    <td id="a-country">Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Post/Zip Cide</th>
+                    <td id="a-zip">Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Label/Management Association</th>
+                    <td id="a-label">Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Label (If yes)</th>
+                    <td id="a-if-yes">Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">PRO Affiliations</th>
+                    <td id="a-pro">Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">~Website</th>
+                    <td id="a-website">Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">YouTube</th>
+                    <td id="a-youtube">Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Instagram</th>
+                    <td id="a-instagram">Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Facebook</th>
+                    <td id="a-facebook">Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Twitter</th>
+                    <td id="a-twitter">Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Top 5 songs</th>
+                    <td id="a-songs">Mark</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary close" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
               </div>
             </div>
           </div>
@@ -81,6 +188,34 @@
     a.action-btn {
         color: black;
     }
+    .modal-content {
+      width: 800px!important;
+    }
+    .profile-area {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 320px;
+    }
+    .profile-area .profile-pic {
+      border-radius: 20px!important;
+      height: 100px;
+      width: 100px;
+    }
+    .profile-area .modal-title {
+      color: black;
+      font-weight: bold;
+      border-bottom: 1px solid #F57141;
+    }
+    .btn-primary {
+      border: none;
+      background: #F57141;
+    }
+    .btn-primary:hover {
+      border: none;
+      background: #F57141;
+    }
   </style>
 </footer>
         <!-- partial -->
@@ -91,7 +226,7 @@
   </div>
   <!-- jQuery -->
   <script src="{{ asset('assets/js/jquery-2.1.0.min.js') }}"></script>
-  <script src="https://cdn.datatables.net/2.0.2/js/dataTables.min.js"></script>
+  {{-- <script src="https://cdn.datatables.net/2.0.2/js/dataTables.min.js"></script> --}}
   <!-- container-scroller -->
   <!-- plugins:js -->
   <script src="{{asset('assets/dash/vendors/js/vendor.bundle.base.js')}}"></script>
@@ -110,7 +245,7 @@
   <!-- Custom js for this page-->
   <!-- End custom js for this page-->
   <script>
-    $('#artists-table').DataTable();
+    // $('#artists-table').DataTable();
 
     $(".del-event-btn").click(function(e){
         e.preventDefault();
@@ -121,6 +256,60 @@
             window.location.href = location;
         }
     });
+
+    $(".action-btn").click(function(){
+      let url = $(this).data('view-url');
+
+      $.ajax({
+        url: url,
+        type: 'GET',
+        headers: {
+          'Accept': 'application/json' // Specify the desired Accept header value
+        },
+      success: function(response) {
+        fillModalWith(response.artist)
+      },
+      error: function(xhr, status, error) {
+        console.log(xhr, status, error);
+      }
+    });
+      // $.get(url, {}, function(response){ 
+      //   console.log(response);
+      // });
+
+      $('#exampleModal').modal('show');
+    });
+
+    $(".close").click(function(){
+      $('#exampleModal').modal('hide');
+    });
+
+    function fillModalWith(artistInfo)
+    {
+      $('#f_name').text(artistInfo.first_name)
+      $('#m_name').text(artistInfo.middle_name)
+      $('#l_name').text(artistInfo.last_name)
+      $('#s_name').text(artistInfo.stage_name)
+      $('#a-email').text(artistInfo.email)
+      $('#a-phone').text(artistInfo.phone)
+      $('#a-dob').text(artistInfo.dob)
+      $('#a-street').text(artistInfo.street)
+      $('#a-city').text(artistInfo.city)
+      $('#a-state').text(artistInfo.state)
+      $('#a-country').text(artistInfo.country)
+      $('#a-zip').text(artistInfo.zip_code)
+      $('#a-label').text(artistInfo.with_label)
+      $('#a-if-yes').text(artistInfo.label_name)
+      $('#a-pro').text(artistInfo.pro_affil)
+      $('#a-website').text(artistInfo.website)
+      $('#a-youtube').text(artistInfo.youtube)
+      $('#a-instagram').text(artistInfo.instagram)
+      $('#a-facebook').text(artistInfo.facebook)
+      $('#a-twitter').text(artistInfo.twitter)
+      $('#a-songs').text(artistInfo.songs_url)
+      $('#exampleModalLabel').text(artistInfo.full_name)
+      $('#profilePhoto').attr('src', artistInfo.photo);
+    }
   </script>
 </body>
 

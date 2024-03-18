@@ -21,6 +21,12 @@
                   @if (\Session::has('event_deleted'))
                     <div class="alert alert-danger">Event successfully deleted</div>
                   @endif
+                  @if (\Session::has('ticket_sales_stopped'))
+                    <div class="alert alert-success">Tickets sales successfully stopped</div>
+                  @endif
+                  @if (\Session::has('ticket_put_sale'))
+                    <div class="alert alert-success">Tickets successfully put on sales</div>
+                  @endif
                   <div class="table-responsive">
                     <table class="table table-striped">
                       <thead>
@@ -35,7 +41,13 @@
                             Date
                           </th>
                           <th>
+                            Tickets on sale?
+                          </th>
+                          <th>
                             Tickets sold
+                          </th>
+                          <th>
+                            Total amount sold (&#8358;)
                           </th>
                           <th>
                             Action
@@ -56,11 +68,20 @@
                                 <span class="label label-info">{{ \Carbon\Carbon::parse($event->event_date)->diffForHumans() }}</span>
                             </td>
                             <td>
-                              800
+                              {!! $event->tickets_on_sale ? 'Yes':'No ' !!} - 
+                              <i>
+                                <a href="{{ $event->tickets_on_sale ? route('event.stopSale', $event->id ) : route('event.putOnSale', $event->id ) }}" class="on-sale-btn">
+                                  {!! $event->tickets_on_sale ? 'stop sale':'put on sale' !!}
+                                </a>
+                              </i>
                             </td>
                             <td>
+                              {{ $event->ticketsAlloted() }} / {{ $event->ticketsSold()->count() }} {!! $event->isSoldOut() ? '<small class="sold-out">Sold out</small>':'' !!}
+                            </td>
+                            <td> {{ number_format($event->amountSold()) }}</td>
+                            <td>
                               <a href="{{ route('event.edit', $event->id) }}" class="action-btn"><li class="fa fa-edit"></li></a> | 
-                              <a href="{{ route('event.delete', $event->id) }}" class="action-btn del-event-btn"><li class="fa fa-trash"></li></a>
+                              <a href="{{ route('event.delete', $event->id) }}" class="action-btn del-event-btn"><li class="fa fa-trash"></li></a> 
                             </td>
                         </tr>
                         @endforeach
@@ -91,6 +112,23 @@
     a.action-btn {
         color: black;
     }
+    small.sold-out {
+      background: green;
+      color: white;
+      font-weight: bolder;
+      font-size: 8px;
+      padding: 2px;
+      border-radius: 3px;
+    }
+
+    td a.on-sale-btn {
+      text-decoration: none;
+      color: black;
+    }
+
+    td a.on-sale-btn:hover {
+      border-bottom: 1px solid #F57141;
+    }
   </style>
 </footer>
         <!-- partial -->
@@ -120,9 +158,19 @@
   <!-- Custom js for this page-->
   <!-- End custom js for this page-->
   <script>
-    $('#table').DataTable();
+    // $('#table').DataTable();
 
     $(".del-event-btn").click(function(e){
+        e.preventDefault();
+
+        let location = $(this).attr('href');
+
+        if (confirm('Are you sure?')) {
+            window.location.href = location;
+        }
+    });
+
+    $(".on-sale-btn").click(function(e){
         e.preventDefault();
 
         let location = $(this).attr('href');

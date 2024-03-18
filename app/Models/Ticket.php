@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * @property int $id
- * @property string $event_id
- * @property string $qty
- * @property string $price
+ * @property integer $event_id
+ * @property integer $qty
+ * @property integer $price
+ * @property integer $sold_amount
  * @property CarbonInterface $created_at
  * @property CarbonInterface $updated_at
  */

@@ -13,4 +13,12 @@ class ArtistController extends Controller
 
         return view('dash.artist.index', compact('artists'));
     }
+
+    public function getArtist(int $id)
+    {
+        $artist = Artist::find($id);
+        $artist->append('full_name');
+
+        return response()->json(compact('artist'));
+    }
 }
