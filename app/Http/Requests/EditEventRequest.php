@@ -16,7 +16,7 @@ class EditEventRequest extends FormRequest
         return [
             'title' => 'required|string',
             'event_date' => 'required|date|after_or_equal:now',
-            'event_image' => 'image|size:4096',
+            'event_image' => 'image',
             'description' => 'required|string',
         ];
     }

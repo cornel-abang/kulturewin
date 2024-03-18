@@ -49,7 +49,7 @@
                     </div>
                     <div class="input-area">
                         <span>Book date</span>
-                        <input name="book_date" type="date" id="brand" value="{{ old('book_date') }}" required>
+                        <input name="book_date" type="date" id="brand" value="{{ old('book_date') }}" class="date-field" required>
                         @if ($errors->has('book_date'))
                             <small class="invalid-feedback" role="alert">
                             {{ $errors->first('book_date') }}
@@ -84,6 +84,14 @@
         margin-top: -10px;
         margin-bottom: 20px;
     }
+    .date-field {
+        color: white!important;
+    }
+    .date-field::-webkit-calendar-picker-indicator { 
+        background: transparent;
+        border: 1px solid white;
+        border-radius: 5px
+     }
 </style>
 
 @include('layouts.faqs')

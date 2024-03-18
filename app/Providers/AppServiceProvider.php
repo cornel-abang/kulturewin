@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\FAQ;
+use App\Models\Event;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -21,5 +22,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         view()->share('faqs', FAQ::all());
+        view()->share('events', Event::all());
     }
 }

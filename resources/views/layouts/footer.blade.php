@@ -164,6 +164,16 @@ $(".assoc-btn").click(function(){
     }
 });
 
+//Event partial
+$(document).ready(function(){
+    $('.event-menu').each(function() {
+        let img = $(this).data('bg-img');
+        let bgImg = "url('" +img+ "')";
+
+        $(this).css('background', bgImg)
+    });
+});
+
 </script>
 </body>
 </html>

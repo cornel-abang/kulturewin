@@ -79,8 +79,8 @@
                             <td>
                               {{ $event->ticketsAlloted() }} / {{ $event->ticketsSold() }} {!! $event->isSoldOut() ? '<small class="sold-out">Sold out</small>':'' !!}
                             </td>
-                            <td> {{ number_format($event->amountSold()) }}</td>
                             <td> {{ number_format($event->expecetedSales()) }}</td>
+                            <td> {{ number_format($event->amountSold()) }}</td>
                             <td>
                               <a href="{{ route('event.edit', $event->id) }}" class="action-btn"><li class="fa fa-edit"></li></a> | 
                               <a href="{{ route('event.delete', $event->id) }}" class="action-btn del-event-btn"><li class="fa fa-trash"></li></a> 

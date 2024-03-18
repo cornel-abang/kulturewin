@@ -49,7 +49,7 @@ class FAQController extends Controller
 
     public function deleteFAQ(int $id)
     {
-        $faq = Faq::find($id);
+        $faq = FAQ::find($id);
         $faq->delete();
 
         session()->flash('faq_deleted', true);

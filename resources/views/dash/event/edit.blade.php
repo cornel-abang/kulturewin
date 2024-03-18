@@ -33,7 +33,7 @@
                         @endif
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Event image <small>(Must not be above 4MB)</small></label>
+                      <label for="exampleInputPassword1">Event image <small>(Must not be above 4MB & Dim: 421px x 530px)</small></label>
                       <input type="file" class="form-control" id="exampleInputPassword1" name="event_image">
                       @if ($errors->has('event_image'))
                             <small class="invalid-feedback" role="alert">

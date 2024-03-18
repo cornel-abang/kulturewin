@@ -33,26 +33,35 @@ class Event extends Model
 
     public function ticketsAlloted()
     {
-        return $this->ticket->qty;
+        return $this->ticket?->qty ?? 0;
     }
 
     public function ticketsSold()
     {
-        return $this->ticket->sold_amount ?? 0;
+        return $this->ticket?->sold_amount ?? 0;
     }
 
     public function amountSold()
     {
-        return $this->ticketsSold() * $this->ticket->price;
+        return $this->ticketsSold() * $this->ticket?->price ?? 0;
     }
 
     public function isSoldOut()
     {
-        return $this->ticketsAlloted() == $this->ticketsSold() ? true:false;
+        if (
+            $this->ticketsAlloted() == $this->ticketsSold() && 
+            $this->ticketsAlloted() != 0
+        ) {
+            return true;
+        }
+        return false;
     }
 
     public function expecetedSales()
     {
-        return $this->ticket->price * $this->ticket->qty;
+        if ($this->ticket) {
+            return $this->ticket->price * $this->ticket->qty;
+        }
+        return 0;
     }
 }

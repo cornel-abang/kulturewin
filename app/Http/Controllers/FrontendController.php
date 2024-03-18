@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\BookArtistRequest;
 use App\Http\Requests\OnboardArtistRequest;
 use App\Models\BookArtist;
+use App\Models\Event;
 
 class FrontendController extends Controller
 {
@@ -88,5 +89,10 @@ class FrontendController extends Controller
     {
         return Artist::find($id)->isBookedOn($date);
 
+    }
+
+    public function buyEventTicket(int $id)
+    {
+        $event = Event::find($id);
     }
 }

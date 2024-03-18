@@ -33,6 +33,7 @@ Route::controller(FrontendController::class)->group(function () {
     Route::post('book/artist/{id}', 'submitBookArtistForm');
     Route::get('artist/onboarding', 'showArtistOnboardingFormPage')->name('artist.onboarding');
     Route::post('artist/onboarding', 'submitArtistOnboardingForm');
+    Route::get('event/{id}/ticket', 'buyEventTicket')->name('ticket.get');
 });
 
 Route::controller(AuthController::class)->group(function () {
