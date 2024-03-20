@@ -16,9 +16,10 @@
                 {{-- <div class="title">Our Story</div> --}}
                 {{-- <a href="{{ route('ticket.get', $event->id) }}"> --}}
                 {{-- <a href="{{ route('event.get', $event->id) }}" class="book-ticket-btn" data-id="{{ $event->id }}"> --}}
+                {{-- <span>The testx</span> --}}
                 <a href="#" class="" data-id="{{ $event->id }}">
                     <div class="event-cta-tx">
-                        GET YOUR TIKCET
+                        GET TIKCET 
                     </div>
                 </a>
             </div>

@@ -18,11 +18,28 @@ class TicketController extends Controller
 
     public function submitTicketForm(SubmitTicketRequest $request)
     {
-        Ticket::create($request->validated());
+        $data = $request->validated();
+        $data['img_url'] = $this->uploadImage($request->img);
+        Ticket::create($data);
 
         session()->flash('ticket_created', true);
 
         return redirect()->route('ticket.index');
+    }
+
+    function generateTicketNumber() {
+        $number = mt_rand(1000000000, 9999999999);
+    
+        // call the same function if the barcode exists already
+        if ($this->ticketNumberExists($number)) {
+            return $this->generateTicketNumber();
+        }
+    
+        return $number;
+    }
+    
+    function ticketNumberExists($number) {
+        // return User::whereBarcodeNumber($number)->exists();
     }
 
     public function ticketIndex()

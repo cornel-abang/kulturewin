@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property integer $qty
  * @property integer $price
  * @property integer $sold_amount
+ * @property string $img_url
  * @property CarbonInterface $created_at
  * @property CarbonInterface $updated_at
  */
@@ -19,7 +20,10 @@ class Ticket extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['event_id', 'qty', 'price'];
+    protected $fillable = [
+        'event_id', 'qty', 
+        'price', 'img_url', 
+    ];
 
     public function event(): BelongsTo
     {

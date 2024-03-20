@@ -12,7 +12,7 @@
                   <p class="card-description">
                     Enter ticket details below..
                   </p>
-                  <form class="forms-sample" method="POST" action="">
+                  <form class="forms-sample" method="POST" action="" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="form-group">
                       <label for="exampleInputUsername1">Event<span>*</span></label>
@@ -43,6 +43,15 @@
                       @if ($errors->has('price'))
                             <small class="invalid-feedback" role="alert">
                             {{ $errors->first('price') }}
+                            </small>
+                        @endif
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Ticket image<span>*</span></label>
+                      <input type="file" class="form-control" id="exampleInputPassword1" name="img" value="{{old('img')}}">
+                      @if ($errors->has('img'))
+                            <small class="invalid-feedback" role="alert">
+                            {{ $errors->first('img') }}
                             </small>
                         @endif
                     </div>
