@@ -61,6 +61,15 @@ return [
 
     'contact_us_email' => env('CONTACT_US', 'info@kulturewin.com'),
 
+    'cc_emails' => [
+        'godson@kulturewin.com',
+        'cobham@kulturewin.com',
+        'cobham@kulturewin.com',
+        'info@kulturewin.com',
+        'kbeckham@kulturewin.com',
+        'rasheed@kulturewin.com',
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone

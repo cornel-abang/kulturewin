@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\App as myApp;
-
 /*
 |--------------------------------------------------------------------------
 | Create The Application
@@ -17,9 +15,7 @@ $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
 
-if (myApp::environment('production')) {
-    $app->usePublicPath(realpath(base_path('/../kulturewin_app')));
-}
+// $app->usePublicPath(realpath(base_path('/../kulturewin_app')));
 
 /*
 |--------------------------------------------------------------------------

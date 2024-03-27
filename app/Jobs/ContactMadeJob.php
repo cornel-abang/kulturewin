@@ -24,6 +24,7 @@ class ContactMadeJob implements ShouldQueue
     public function handle(): void
     {
         Mail::to(config('app.contact_us_email'))
+            ->cc(config('app.cc_emails'))
             ->send(new NotifyAdmin($this->contact));
     }
 }
