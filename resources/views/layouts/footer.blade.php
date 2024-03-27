@@ -30,7 +30,7 @@
                 </div>
                 <div class="footer-info-txt">
                     <p>Terms & Conditions - Privacy Policy 2024</p>
-                    <p>All Rights Reserved by <span>Kulturewin</span></p>
+                    <p>All Rights Reserved @ <span>Kulturewin</span></p>
                 </div>
             </div>
         </div>
