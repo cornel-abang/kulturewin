@@ -107,7 +107,7 @@ class FrontendController extends Controller
     {
         $contact = Contact::create($request->validated());
 
-        ContactMadeJob::dispatchAfterResponse($contact);
+        event(new ContactMadeEvent($contact));
 
         session()->flash('contact_made', true);
 
