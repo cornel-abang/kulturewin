@@ -17,7 +17,7 @@
         @if (\Session::has('contact_made'))
             <div class="alert alert-success" role="alert">
                 Thank you for reaching out!<br>
-                We will get back to you withing 24 hours.
+                We will get back to you within 24 hours.
             </div>
         @endif
         <div class="contact-form">

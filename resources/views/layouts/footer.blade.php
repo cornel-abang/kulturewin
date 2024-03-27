@@ -7,6 +7,7 @@
                     <a href="{{ route("home") }}"  class="{{ request()->routeIs('home') ? 'active' : '' }}">HOME</a>
                     <a href="{{ route("about") }}"  class="{{ request()->routeIs('about') ? 'active' : '' }}">OUR STORY</a>
                     <a href="{{ route("services") }}" class="{{ request()->routeIs('services') ? 'active' : '' }}">WHAT WE DO</a>
+                    <a href="{{ route("book.artist") }}" class="{{ request()->routeIs('book.artist') ? 'active' : '' }}">BOOK ARTIST</a>
                     {{-- <a href="#">BLOGS</a> --}}
                     <a href="{{ route("contact") }}" class="{{ request()->routeIs('contact') ? 'active' : '' }}">CONTACT</a>
                     <a href="#">UPCOMING EVENTS/TICKETS</a>

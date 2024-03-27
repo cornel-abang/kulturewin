@@ -108,9 +108,9 @@
             {{-- <div class="faq-answer">
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div> --}}
-            <a href="{{ route('services') }}">
+            <a href="{{ route('book.artist') }}">
                 <div class="faq-item">
-                    <div class="faq-question">Production</div>
+                    <div class="faq-question">Artist Booking</div>
                     <div class="icon-container">
                         <i class="fas fa-chevron-right"></i>
                     </div>

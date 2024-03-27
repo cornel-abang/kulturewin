@@ -60,7 +60,7 @@
                             <li class="scroll-to-section"><a href="{{ route("services") }}" class="{{ request()->routeIs('services') ? 'active' : '' }}">What We Do</a></li>
                             <li class="scroll-to-section"><a href="{{ route("portfolio") }}" class="{{ request()->routeIs('portfolio') ? 'active' : '' }}">Portfolio</a></li>
                             {{-- <li class="scroll-to-section"><a href="{{ route("artist.onboarding") }}">Onboarding</a></li> --}}
-                            {{-- <li class="scroll-to-section"><a href="/blog">Blogs</a></li>  --}}
+                            <li class="scroll-to-section"><a href="{{ route("book.artist") }}" class="{{ request()->routeIs('book.artist') ? 'active' : '' }}">Artist Booking</a></li> 
                             <li class="scroll-to-section"><a href="{{ route("contact") }}" class="{{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a></li> 
                         </ul>        
                         <a class='menu-trigger'>
