@@ -49,8 +49,8 @@
                 <div class="col-9">
                     <nav class="main-nav">
                             <!-- ***** Logo Start ***** -->
-                        <a href="/" class="logo" style="color: #e8e1e1;">Kulturewin
-                            {{-- <img src="{{ asset('assets/images/logo.png') }}" align="Kulturewin"> --}}
+                        <a href="/" class="logo" style="color: #e8e1e1;">
+                            <img src="{{ asset('assets/images/logo.png') }}" height="70" width="100" style="margin-left: 20px">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->

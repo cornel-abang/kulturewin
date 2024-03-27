@@ -4,9 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use App\Models\Artist;
+use App\Models\Contact;
 use App\Models\Portfolio;
 use App\Models\BookArtist;
+use App\Jobs\ContactMadeJob;
 use Illuminate\Http\Request;
+use App\Events\ContactMadeEvent;
+use App\Http\Requests\ContactUsrequest;
 use App\Http\Requests\BookArtistRequest;
 use App\Http\Requests\PayForTicketRequest;
 use App\Http\Requests\OnboardArtistRequest;
@@ -99,8 +103,14 @@ class FrontendController extends Controller
         return response()->json(compact('event'));
     }
 
-    public function redirectToGateway(PayForTicketRequest $request)
+    public function submitContactForm(ContactUsrequest $request)
     {
-        //
+        $contact = Contact::create($request->validated());
+
+        ContactMadeJob::dispatchAfterResponse($contact);
+
+        session()->flash('contact_made', true);
+
+        return redirect()->back();
     }
 }

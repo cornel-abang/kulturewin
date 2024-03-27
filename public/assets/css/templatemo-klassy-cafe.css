@@ -51,7 +51,7 @@ reset
 .hero-area {
   background: #101010;
   width: 1500px;
-  height: 680px;
+  height: 850px;
   padding-left: 80px;
   display: flex;
   flex-direction: row;
@@ -70,7 +70,7 @@ reset
 .hero-about {
   width: 415px;
   height: 292px;
-  margin-left: 72px;
+  margin-left: -50px;
   display: flex;
   flex-direction: column;
 }
@@ -109,7 +109,7 @@ reset
   color: #F4F4F499;
 }
 
-.p-text div{
+.p-text .s-head{
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -121,6 +121,7 @@ reset
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin-top: 50px;
 }
 
 .p-text p{
@@ -130,6 +131,10 @@ reset
   line-height: 86px;
   letter-spacing: -0.02em;
   color: #FFFFFF;
+}
+
+.p-text .f-head{
+  width: 800px;
 }
 
 .p-box {
@@ -195,7 +200,7 @@ reset
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 540px;
+  width: 400px;
 }
 
 .hero-nums-area .hero-num {
@@ -1041,7 +1046,7 @@ footer {
 .about-img {
   width: 1296px;
   height: 400px;
-  background: url("/assets/images/about.png");
+  background: #101010;
 }
 
 .about-us-box {
@@ -1212,7 +1217,7 @@ footer {
 .services-img {
   width: 1296px;
   height: 400px;
-  background: url("/assets/images/services.png");
+  background: #101010;
 }
 
 .our-services-box {
@@ -1674,7 +1679,7 @@ footer {
 .portfolio-img {
   width: 1296px;
   height: 400px;
-  background: url("/assets/images/portfolio.png");
+  background: #101010;
 }
 
 .portfolio-area {
@@ -1799,7 +1804,7 @@ footer {
 .artist-img {
   width: 1296px;
   height: 450px;
-  background: url("/assets/images/artist.png");
+  background: #101010;
 }
 
 .artists-area {

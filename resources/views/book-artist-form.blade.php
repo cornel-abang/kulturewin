@@ -15,7 +15,6 @@
         <div class="contact-form">
             <form action="" method="POST">
                 {{ csrf_field() }}
-                
                 <div class="form-field">
                     <div class="input-area">
                         <span>Your name</span>

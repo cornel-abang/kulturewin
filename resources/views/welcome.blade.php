@@ -8,10 +8,14 @@
                     <div class="hero-intro">
                         <div class="hero-play-text">
                             <div class="p-text">
-                                <div>
-                                    <p>Light. <div class="p-box"></div></p> <p>Sound.</p>
+                                <div class="f-head">
+                                    <p>Connecting African</p>
                                 </div>
-                                <p>Talent. Action. Crew.</p>
+                                <p>brands and talent to</p>
+                                <div class="s-head">
+                                    <p>the world</p>
+                                    <div class="p-box"></div>
+                                </div>
                             </div>
                         </div>
                         <div class="hero-play-vid">
@@ -32,26 +36,26 @@
                             </p>
                             <div class="hero-nums-area">
                                 <div class="hero-num">
-                                    <span>15</span>
+                                    <span>7+</span>
                                     <div class="hero-num-text-area">
                                         <span>Years</span>
                                         <span>Experience</span>
                                     </div>
                                 </div>
                                 <div class="hero-num">
-                                    <span>1k</span>
+                                    <span>35+</span>
                                     <div class="hero-num-text-area">
                                         <span>Events</span>
                                         <span>Handled</span>
                                     </div>
                                 </div>
-                                <div class="hero-num">
+                                {{-- <div class="hero-num">
                                     <span>20</span>
                                     <div class="hero-num-text-area">
                                         <span>Artist</span>
                                         <span>Agencies</span>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         {{-- </div> --}}
                     </div>
@@ -67,10 +71,11 @@
             <div class="client-area">
                 <div class="intro-txt">Here are people we have worked with</div>
                 <div class="client-list">
-                    <img src="{{ asset('assets/images/icons/musixlab.png')}}">
-                    <img src="{{ asset('assets/images/icons/north.png')}}">
-                    <img src="{{ asset('assets/images/icons/vihe.png')}}">
-                    <img src="{{ asset('assets/images/icons/sharelocks.png')}}">
+                    <img src="{{ asset('assets/images/icons/client1.png')}}">
+                    <img src="{{ asset('assets/images/icons/client2.png')}}">
+                    <img src="{{ asset('assets/images/icons/client3.png')}}">
+                    <img src="{{ asset('assets/images/icons/client1.png')}}">
+                    {{-- <img src="{{ asset('assets/images/icons/sharelocks.png')}}"> --}}
                 </div>
             </div>
         </div>
@@ -314,6 +319,32 @@
 
     <!-- ***** Upcoming Events Starts ***** -->
     @include('layouts.events')
-    
+    <style>
+        .client-area {
+            overflow: hidden;
+        }
+
+        .client-list {
+            display: flex;
+            animation: slide 15s infinite; /* Adjust the duration as needed */
+        }
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        .client-list img {
+            flex: 0 0 auto;
+            width: 100px; /* Adjust the width as needed */
+            /* height: auto; */
+            margin-right: 10px; /* Adjust the space between images */
+        }
+    </style>
     <!-- ***** Footer Start ***** -->
     @include('layouts.footer')

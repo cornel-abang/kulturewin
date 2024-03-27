@@ -231,6 +231,18 @@ $(".book-ticket-btn").click(function(e){
         $("#ticket-qty").attr('max', event.ticket.qty);
     }
 
+    // If you want to pause the animation on hover
+const clientArea = document.querySelector('.client-area');
+
+clientArea.addEventListener('mouseenter', () => {
+    clientArea.style.animationPlayState = 'paused';
+});
+
+clientArea.addEventListener('mouseleave', () => {
+    clientArea.style.animationPlayState = 'running';
+});
+
+
 </script>
 </body>
 </html>

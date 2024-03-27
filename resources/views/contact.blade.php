@@ -14,16 +14,33 @@
 <section class="section contact-form-area" id="">
     <div class="contact-form-box">
         <div class="contact-header">Make Enquiry</div>
+        @if (\Session::has('contact_made'))
+            <div class="alert alert-success" role="alert">
+                Thank you for reaching out!<br>
+                We will get back to you withing 24hrs.
+            </div>
+        @endif
         <div class="contact-form">
-            <form>
+            <form method="POST" action="">
+                {{ csrf_field() }}
                 <div class="form-field">
                     <div class="input-area">
                         <span>Name</span>
-                        <input name="name" type="text" id="name" placeholder="Your name" required="">
+                        <input name="name" type="text" id="name" placeholder="Your name" value="{{ old('name') }}" required="">
+                        @if ($errors->has('name'))
+                            <small class="invalid-feedback" role="alert">
+                            {{ $errors->first('name') }}
+                            </small>
+                        @endif
                     </div>
                     <div class="input-area">
                         <span>Brand Name</span>
-                        <input name="brand" type="text" id="brand" placeholder="Your company name" required="">
+                        <input name="brand" type="text" id="brand" placeholder="Your company/brand name" value="{{ old('brand') }}" required="">
+                        @if ($errors->has('brand'))
+                            <small class="invalid-feedback" role="alert">
+                            {{ $errors->first('brand') }}
+                            </small>
+                        @endif
                     </div>
                 </div>
                 {{-- <div class="form-field">
@@ -32,11 +49,21 @@
                 <div class="form-field">
                     <div class="input-area">
                         <span>Email</span>
-                        <input name="email" type="email" id="email" placeholder="Email address" required="">
+                        <input name="email" type="email" id="email" placeholder="Email address" value="{{ old('email') }}" required="">
+                        @if ($errors->has('email'))
+                            <small class="invalid-feedback" role="alert">
+                            {{ $errors->first('email') }}
+                            </small>
+                        @endif
                     </div>
                     <div class="input-area">
                         <span>Phone</span>
-                        <input name="phone" type="text" id="phone" placeholder="Phone number" required="">
+                        <input name="phone" type="text" id="phone" placeholder="Phone number" value="{{ old('phone') }}" required="">
+                        @if ($errors->has('phone'))
+                            <small class="invalid-feedback" role="alert">
+                            {{ $errors->first('phone') }}
+                            </small>
+                        @endif
                     </div>
                 </div>
                 {{-- <div class="form-field">
@@ -45,7 +72,12 @@
                 <div class="form-field">
                     <div class="input-txt-area">
                         <span>How can we help?</span>
-                        <textarea name="message" rows="6" id="message" placeholder="How can we help?" required=""></textarea>
+                        <textarea name="message" rows="6" id="message" placeholder="How can we help?" required="">{{ old('message') }}</textarea>
+                        @if ($errors->has('message'))
+                            <small class="invalid-feedback" role="alert">
+                            {{ $errors->first('message') }}
+                            </small>
+                        @endif
                     </div>
                 </div>
                 <div class="check-area">
@@ -104,7 +136,7 @@
         <div class="map-info">
             <div class="txt-area">
                 <div class="title">DROP BY OUR OFFICE</div><br/>
-                <div class="address">21 Fola Osibo Street, Lekki Phase 1</div>
+                <div class="address">12 Fola Osibo Street</div>
                 <span class="app-txt">(by appointment ony)</span>
             </div>
         </div>
@@ -119,6 +151,28 @@
         </div>
     </div>
 </section>
+
+<style>
+    .invalid-feedback {
+        display: inline !important;
+        font-size: 14px;
+        color: red;
+        margin-top: -10px;
+        margin-bottom: 20px;
+    }
+    .alert-success {
+        text-align: center;
+    }
+    .contact-form .form-field input, 
+    .contact-form textarea, 
+    .contact-form select {
+        color: white!important;
+    }
+    .form-field .input-area span, 
+    .form-field .input-txt-area span {
+        font-size: 20px;
+    }
+</style>
     
 <!-- ***** Footer Start ***** -->
 @include('layouts.footer')

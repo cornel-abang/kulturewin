@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'KultureWin'),
 
     /*
     |--------------------------------------------------------------------------
@@ -58,6 +58,8 @@ return [
     'url' => env('APP_URL', 'http://localhost'),
 
     'asset_url' => env('ASSET_URL'),
+
+    'contact_us_email' => env('CONTACT_US', 'info@kulturewin.com'),
 
     /*
     |--------------------------------------------------------------------------
