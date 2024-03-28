@@ -2855,6 +2855,9 @@ header
   .help-menu .help-img {
     width: 390px!important;
   }
+  .help-menu {
+    margin-left: 10px!important;
+  }
   .help-info .title {
     border-left: 15px solid white!important;
   }

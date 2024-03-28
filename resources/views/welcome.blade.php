@@ -326,7 +326,7 @@
 
         .client-list {
             display: flex;
-            animation: slide 15s infinite; /* Adjust the duration as needed */
+            animation: slide 10s infinite; /* Adjust the duration as needed */
         }
         @keyframes slide {
             0% {
