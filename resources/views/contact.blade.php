@@ -81,6 +81,7 @@
                     </div>
                 </div>
                 <div class="check-area">
+                    <h4 style="color: white;">Reason?</h4>
                     <div class="form-check">
                         <input class="" name="reasons" type="checkbox" value="Event Mgt." id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">

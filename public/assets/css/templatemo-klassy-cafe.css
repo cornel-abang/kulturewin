@@ -3023,13 +3023,14 @@ header
     width: 400px!important;
     margin-top: 30px!important;
     margin-bottom: 120px!important;
+    height: 600px!important;
   }
   .our-mission-area .mission-title {
     font-size: 42px!important;
     line-height: 56px!important;
   }
   .our-mission-area .mission-txt {
-    font-size: 15px!important;
+    font-size: 18px!important;
     line-height: 23px!important;
   }
   .our-vision-area {
@@ -3042,7 +3043,7 @@ header
     line-height: 56px!important;
   }
   .our-vision-area .vision-txt {
-    font-size: 15px!important;
+    font-size: 18px!important;
     line-height: 23px!important;
   }
   .our-prop-area {
@@ -3058,7 +3059,6 @@ header
     font-size: 15px!important;
     line-height: 23px!important;
   }
-  
   .services-story {
     flex-direction: column!important;
     padding-left: 0px!important;
@@ -3089,7 +3089,7 @@ header
     line-height: 56px!important;
   }
   .our-event-area .event-txt {
-    font-size: 15px!important;
+    font-size: 18px!important;
     line-height: 23px!important;
   }
   .our-promo-area {
@@ -3102,7 +3102,7 @@ header
     line-height: 56px!important;
   }
   .our-promo-area .promo-txt {
-    font-size: 15px!important;
+    font-size: 18px!important;
     line-height: 23px!important;
   }
   .our-artist-area {
@@ -3115,8 +3115,9 @@ header
     line-height: 56px!important;
   }
   .our-artist-area .artist-txt {
-    font-size: 15px!important;
+    font-size: 18px!important;
     line-height: 23px!important;
+    margin-top: -30px!important;
   }
   
   .our-market-area {
@@ -3129,8 +3130,151 @@ header
     line-height: 56px!important;
   }
   .our-market-area .market-txt {
-    font-size: 15px!important;
+    font-size: 18px!important;
     line-height: 23px!important;
+  }
+  .portfolio-area {
+    margin-top: -150px!important;
+  }
+  .portfolio-story {
+    flex-direction: column!important;
+    padding-left: 0px!important;
+    width: 400px!important;
+  }
+  .portfolio-story h3{
+    padding-left: 10px!important;
+    font-size: 40px!important;;
+  }
+  .portfolio-story p {
+    font-size: 20px!important;
+    line-height: 35px!important;
+    line-height: 35px!important;
+    padding-left: 10px!important;
+    padding-right: 50px!important;
+    margin-top: -30px!important;
+  }
+  .portfolio-area .portfolio-item img {
+    width: 600px!important;
+  }
+  .portfolio-item .portfolio-info {
+    width: 400px!important;
+    height: 300px!important;
+    margin-right: 100px!important;
+    bottom: 350px!important;
+  }
+  .artist-story {
+    flex-direction: column!important;
+    padding-left: 0px!important;
+    width: 400px!important;
+  }
+  .artist-story h3{
+    padding-left: 10px!important;
+    font-size: 40px!important;;
+  }
+  .artist-story p {
+    font-size: 20px!important;
+    line-height: 35px!important;
+    line-height: 35px!important;
+    padding-left: 10px!important;
+    padding-right: 50px!important;
+    margin-top: -30px!important;
+  }
+  .artists-area {
+    flex-direction: column!important;
+    align-items: flex-start!important;
+    margin-top: 100px!important;
+    margin-bottom: 200px!important;
+  }
+
+  .faq-section-box {
+    flex-direction: column!important;
+  }
+  .faq-area {
+    width: 400px!important;
+    padding-left: 10px!important;
+  }
+  .faq-area h3{
+    padding-left: 10px!important;
+    font-size: 40px!important;;
+  }
+  .faq-area p {
+    font-size: 20px!important;
+    line-height: 35px!important;
+    line-height: 35px!important;
+    padding-left: 10px!important;
+    padding-right: 50px!important;
+    margin-top: -30px!important;
+  }
+  .faq-section-box .faq-container2 {
+    padding-left: 0px!important;
+    width: 460px!important;
+  }
+  .faq-section-box .faq-item {
+    padding-left: 10px!important;
+    width: 420px!important;
+  }
+  .faq-section-box .faq-question {
+    font-size: 20px!important;
+  }
+
+  .contact-story {
+    flex-direction: column!important;
+    padding-left: 0px!important;
+    width: 400px!important;
+  }
+  .contact-story h3{
+    padding-left: 10px!important;
+    font-size: 40px!important;;
+  }
+  .contact-story p {
+    font-size: 20px!important;
+    line-height: 35px!important;
+    line-height: 35px!important;
+    padding-left: 10px!important;
+    padding-right: 50px!important;
+    margin-top: -30px!important;
+    width: 400px!important;
+  }
+  .contact-form-area .contact-form-box {
+    height: 1400px!important;
+  }
+  .contact-form form .form-field {
+    flex-direction: column!important;
+    margin-right: 10px!important;
+  }
+  .form-field .input-area, .form-field .input-txt-area {
+    margin-right: 80px!important;
+    width: 300px!important;
+  }
+  .contact-form .form-field input,
+   .contact-form textarea, 
+   .contact-form select {
+    width: 390px!important;
+  }
+  .contact-form-box .contact-header {
+    width: 350px!important;
+  }
+  .check-area {
+    flex-direction: column!important;
+    height: 380px!important;
+  }
+  .check-area .form-check {
+    justify-content: flex-start!important;
+  }
+  .check-area .form-check input {
+    margin-right: 20px!important;
+  }
+  .address-area {
+    padding-left: 10px!important;
+  }
+  .map .location-icon {
+    right: 350px!important;
+    top:30.67px!important;
+  }
+  .address-area .map-info {
+    align-self: flex-start!important;
+    width: 400px!important;
+    padding: 60px 50px 80px 10px!important;
   }
 }
 
