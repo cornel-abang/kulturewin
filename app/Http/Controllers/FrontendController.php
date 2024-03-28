@@ -5,14 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Event;
 use App\Models\Artist;
 use App\Models\Contact;
+use App\Mail\NewBooking;
+use App\Mail\NewEnquiry;
 use App\Models\Portfolio;
 use App\Models\BookArtist;
-use App\Jobs\ContactMadeJob;
-use Illuminate\Http\Request;
-use App\Events\ContactMadeEvent;
+use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\ContactUsrequest;
 use App\Http\Requests\BookArtistRequest;
-use App\Http\Requests\PayForTicketRequest;
 use App\Http\Requests\OnboardArtistRequest;
 
 class FrontendController extends Controller
@@ -83,7 +82,9 @@ class FrontendController extends Controller
                 ->withErrors(['book_date' => 'Artist is already booked on this date']);
         }
 
-        BookArtist::create($request->validated());
+        $booking = BookArtist::create($request->validated());
+
+        $this->notifyAdminForNewBooking($booking);
 
         session()->flash('artist_booked', true);
 
@@ -107,10 +108,24 @@ class FrontendController extends Controller
     {
         $contact = Contact::create($request->validated());
 
-        event(new ContactMadeEvent($contact));
+        $this->notifyAdminForNewEnquiry($contact);
 
         session()->flash('contact_made', true);
 
         return redirect()->back();
+    }
+
+    public function notifyAdminForNewEnquiry(Contact $contact)
+    {
+        Mail::to(config('app.contact_us_email'))
+            ->cc(config('app.cc_emails'))
+            ->send(new NewEnquiry($contact));
+    }
+
+    public function notifyAdminForNewBooking(BookArtist $booking)
+    {
+        Mail::to(config('app.artist_booking_email'))
+            ->cc(config('app.cc_emails'))
+            ->send(new NewBooking($booking));
     }
 }

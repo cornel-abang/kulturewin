@@ -61,6 +61,8 @@ return [
 
     'contact_us_email' => env('CONTACT_US', 'info@kulturewin.com'),
 
+    'artist_booking_email' => env('BOOKINGS_EMAIL', 'bookings@kulturewin.com'),
+
     'cc_emails' => [
         'godson@kulturewin.com',
         'cobham@kulturewin.com',

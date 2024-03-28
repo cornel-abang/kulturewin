@@ -11,9 +11,9 @@
                                 <div class="f-head">
                                     <p>Connecting African</p>
                                 </div>
-                                <p>brands and talent to</p>
+                                <p>Brands and Talent to</p>
                                 <div class="s-head">
-                                    <p>the world</p>
+                                    <p>the World</p>
                                     <div class="p-box"></div>
                                 </div>
                             </div>
