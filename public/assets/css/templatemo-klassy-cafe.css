@@ -3238,6 +3238,10 @@ header
     margin-top: -30px!important;
     width: 400px!important;
   }
+  .contact-form {
+    padding-left: 50px!important;
+    padding-right: 50px!important;
+  }
   .contact-form-area .contact-form-box {
     height: 1400px!important;
   }
