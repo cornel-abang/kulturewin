@@ -2579,6 +2579,14 @@ header
   color: #fb5849;
 }
 
+.logo-black {
+  display: none;
+}
+.header-area.header-sticky {
+  min-height: 100px!important;
+}
+
+
 @media (max-width: 1200px) {
   .header-area .main-nav .nav li {
     padding-left: 12px;
@@ -2591,8 +2599,210 @@ header
 
 @media (max-width: 767px) {
   .header-area .main-nav .logo {
-    color: #1e1e1e;
+    margin-left: -20px!important;
   }
+  .header-area .main-nav {
+    height: 100px!important;
+  }
+  .logo-white {
+    display: none!important;
+  }
+  .logo-black {
+    display: inline!important;
+  }
+  .main-nav {
+    margin-left: 0px;
+  }
+  .event-btn {
+    display: none;
+  }
+  .p-text {
+    flex-direction: row!important;
+    flex-wrap: wrap!important;
+    width: 300px!important;
+    margin-top: 0px!important;
+  }
+  .hero-area {
+    padding-left: 10px!important;
+    margin-top: 0px!important;
+  }
+  .hero-intro {
+    margin-top: -15px!important;
+  }
+  .hero-play-vid {
+    width: 393px!important;
+    height: 320px!important;
+  }
+  .hero-about {
+    position: absolute!important;
+    top: 540px!important;
+    left: 78px!important;
+  }
+  .hero-about .about-h {
+    font-size: 16px!important;
+  }
+  .hero-about .header {
+    width: 110px!important;
+  }
+  .hero-about .text {
+    font-size: 15px!important;
+    padding-right: 20px!important;
+  }
+  .p-text .f-head {
+    width:300px!important;
+    margin-top: 20px!important;
+    margin-bottom: -65px!important;
+  }
+  .p-text .s-head {
+    margin-top: -65px!important;
+  }
+  .p-text p {
+    font-size: 32px;
+    width: 300px!important;
+  }
+  .p-box {
+    margin: -10px 0px 5px -146px!important;
+    height: 25px !important;
+    width: 25px !important;
+  }
+  .hero-play-vid div {
+    width: 50px!important;
+    height: 50px!important;
+  }
+  .hero-nums-area {
+    justify-content: flex-start!important;
+    width: 393px!important;
+  }
+  .hero-nums-area .hero-num {
+    font-size: 60px!important;
+    width: 250px!important;
+  }
+  .hero-nums-area .hero-num .hero-num-text-area {
+    font-size: 15px!important;
+    justify-content: center!important;
+  }
+  #about {
+    margin-top: -50px!important;
+  }
+  .client-area {
+    height: 250px!important;
+  }
+  .client-area .intro-txt {
+    margin-top: 20px!important;
+    font-size: 25px!important;
+  }
+  .client-list {
+    width: 393px!important;
+  }
+  .expertise-area {
+    padding-left: 10px!important;
+  }
+
+  .expertise-area h3 {
+    font-size: 40px!important;
+  }
+  .expertise-area p {
+    font-size: 20px!important;
+    width: 405px!important;
+  }
+  .faq-container {
+    padding-left: 0px!important;
+  }
+  .faq-container .faq-item {
+    padding-left: 10px!important;
+    width: 393px!important;
+  }
+  .faq-container .faq-question {
+    font-size: 25px!important;
+  }
+  .faq-item .fa-chevron-right {
+    font-size: 25px!important;
+  }
+  .experience-area {
+    flex-direction: column!important;
+    width: 393px!important;
+    padding-left: 10px!important;
+  }
+  .experience-area h3 {
+    font-size: 40px!important;
+    width: 410px!important;
+  }
+  .experience-area p {
+    padding-left: 0px!important;
+    font-size: 25px!important;
+    padding-right: 10px!important;
+  }
+  .help-txt-area {
+    width: 393px!important;
+    padding-left: 10px!important;
+    padding-top: 130px!important;
+  }
+  .help-txt-area h3 {
+    font-size: 40px!important;
+  }
+  .help-txt-area p {
+    font-size: 25px!important;
+  }
+  .help-menu-area {
+    flex-direction: column!important;
+    width: 393px!important;
+    padding-top: 10px!important;
+  }
+  .help-info .title, .help-info .arrow i {
+    font-size: 35px!important;
+  }
+  .help-menu .help-img {
+    width: 390px!important;
+  }
+  .help-info .title {
+    border-left: 15px solid white!important;
+  }
+  .help-info a {
+    border-right: 15px solid white!important;
+  }
+  .event-txt-area {
+    width: 393px!important;
+    padding-left: 10px!important;
+    padding-top: 130px!important;
+  }
+  .event-txt-area h3 {
+    font-size: 40px!important;
+  }
+  .event-txt-area p {
+    font-size: 25px!important;
+  }
+  .event-menu-area {
+    flex-direction: column!important;
+    width: 393px!important;
+  }
+  .event-menu-area .event-menu {
+    margin-top: 15px!important;
+    margin-left: 12px!important;
+    width: 405px!important;
+  }
+  footer {
+    width: 440px!important;
+    height: 550px!important;
+    padding-top: 20px!important;
+  }
+  .footer-area .footer-links {
+    flex-direction: column!important;
+    width: 400px!important;
+    height: 300px!important;
+  }
+  .header-area .main-nav .menu-trigger {
+    right: -80px!important;
+  }
+  .header-area .main-nav .nav {
+    position: absolute!important;
+    top: -31px!important;
+    left: 155px!important;
+  }
+  .header-area .main-nav .nav li {
+    width: 300px!important;
+    margin-left: -100px!important;
+  }
+
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
     color: #fb5849!important;
@@ -2640,7 +2850,7 @@ header
     width: 100%;
     background: #fff;
     border-bottom: 1px solid #eee;
-    padding-left: 0px !important;
+    padding-left: 10px !important;
     padding-right: 0px !important;
   }
   .header-area .main-nav .nav li a {
@@ -2650,6 +2860,7 @@ header
     border: none !important;
     background: #f7f7f7 !important;
     color: #191a20 !important;
+    text-align: left!important;
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
@@ -2855,6 +3066,45 @@ banner
   outline: none;
   opacity: 0.3;
   transition: all .3s;
+}
+@media (max-width: 390px) {
+  .hero-play-vid {
+    width: 360px!important;
+  }
+  .hero-about .text {
+    padding-right: 70px!important;
+  }
+  .hero-nums-area {
+    width: 360px!important;
+  }
+  .expertise-area, .expertise-area p {
+    width: 360px!important;
+  }
+  .experience-area p {
+    padding-right: 20px!important;
+  }
+  .help-menu .help-img {
+    width: 360px!important;
+  }
+  .help-menu-area .help-menu {
+    align-items: flex-start!important;
+  }
+  .help-menu .help-info {
+    align-items: flex-start!important;
+    width: 360px!important;
+  }
+  .help-info .title {
+    border-left: none!important;
+  }
+  .help-info a {
+    border-right: none!important;
+  }
+  .event-menu-area .event-menu {
+    width: 360px!important;
+  }
+  footer {
+    width: 400px!important;
+  }
 }
 
 .Modern-Slider .PrevArrow:hover {

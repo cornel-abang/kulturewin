@@ -49,8 +49,11 @@
                 <div class="col-9">
                     <nav class="main-nav">
                             <!-- ***** Logo Start ***** -->
-                        <a href="/" class="logo" style="color: #e8e1e1;">
+                        <a href="/" class="logo logo-white" style="color: #e8e1e1;">
                             <img src="{{ asset('assets/images/logo.png') }}" height="70" width="100" style="margin-left: 20px">
+                        </a>
+                        <a href="/" class="logo logo-black" style="color: #e8e1e1;">
+                            <img src="{{ asset('assets/images/logo-black.png') }}" height="70" width="100" style="margin-left: 20px">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -62,6 +65,7 @@
                             {{-- <li class="scroll-to-section"><a href="{{ route("artist.onboarding") }}">Onboarding</a></li> --}}
                             <li class="scroll-to-section"><a href="{{ route("book.artist") }}" class="{{ request()->routeIs('book.artist') ? 'active' : '' }}">Artist Booking</a></li> 
                             <li class="scroll-to-section"><a href="{{ route("contact") }}" class="{{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a></li> 
+                            <li class="scroll-to-section hide-nav-item" id="events-link"><a href="#" class="">Upcoming Events/Ticket</a></li> 
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -75,4 +79,9 @@
             </div>
         </div>
     </header>
+    <style>
+        li.hide-nav-item {
+            display: none;
+        }
+    </style>
     <!-- ***** Header Area End ***** -->

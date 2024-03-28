@@ -233,17 +233,19 @@ $(".book-ticket-btn").click(function(e){
     }
 
     // If you want to pause the animation on hover
-const clientArea = document.querySelector('.client-area');
+    const clientArea = document.querySelector('.client-area');
 
-clientArea.addEventListener('mouseenter', () => {
-    clientArea.style.animationPlayState = 'paused';
-});
+    clientArea.addEventListener('mouseenter', () => {
+        clientArea.style.animationPlayState = 'paused';
+    });
 
-clientArea.addEventListener('mouseleave', () => {
-    clientArea.style.animationPlayState = 'running';
-});
+    clientArea.addEventListener('mouseleave', () => {
+        clientArea.style.animationPlayState = 'running';
+    });
 
-
+    $(".menu-trigger").click(function(){
+      $('#events-link').removeClass('hide-nav-item');
+    });
 </script>
 </body>
 </html>
