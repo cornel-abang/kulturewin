@@ -65,7 +65,7 @@
                             {{-- <li class="scroll-to-section"><a href="{{ route("artist.onboarding") }}">Onboarding</a></li> --}}
                             <li class="scroll-to-section"><a href="{{ route("book.artist") }}" class="{{ request()->routeIs('book.artist') ? 'active' : '' }}">Artist Booking</a></li> 
                             <li class="scroll-to-section"><a href="{{ route("contact") }}" class="{{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a></li> 
-                            <li class="scroll-to-section hide-nav-item" id="events-link"><a href="#" class="">Upcoming Events/Ticket</a></li> 
+                            <li class="scroll-to-section hide-nav-item" id="events-link"><a href="#" class="">Upcoming Events/Tickets</a></li> 
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>

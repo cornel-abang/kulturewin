@@ -1816,18 +1816,20 @@ footer {
   height: 856px;
   border-radius: 4px;
   flex-wrap: wrap;
+  margin-bottom: 1100px;
 }
 
 .artists-area .artist-tile img {
-  width: 416px;
-  height: 416px;  
+  width: 450px;
+  height: 430px;  
   border-radius: 4px;
 }
 
 .artists-area .artist-tile {
-  width: 416px;
-  height: 416px;  
+  width: 450px;
+  height: 430px; 
   border-radius: 4px;
+  margin-top: 20px;
 }
 
 .artists-area .artist-tile .overlay {
@@ -1836,8 +1838,8 @@ footer {
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.5); /* Black see-through */
   color: #f1f1f1;
-  width: 416px;
-  height: 416px;  
+  width: 450px;
+  height: 418px;  
   border-radius: 4px;
   transition: .5s ease;
   color: white;
@@ -2699,6 +2701,9 @@ header
 } */
 
 @media (max-width: 767px) {
+  .page-breadcrumb {
+    margin-top: 130px;
+  }
   .header-area .main-nav .logo {
     margin-left: -20px!important;
   }

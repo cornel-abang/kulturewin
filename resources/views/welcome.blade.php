@@ -74,7 +74,8 @@
                     <img src="{{ asset('assets/images/icons/client1.png')}}">
                     <img src="{{ asset('assets/images/icons/client2.png')}}">
                     <img src="{{ asset('assets/images/icons/client3.png')}}">
-                    <img src="{{ asset('assets/images/icons/client1.png')}}">
+                    <img src="{{ asset('assets/images/icons/client4.png')}}">
+                    <img src="{{ asset('assets/images/icons/client5.png')}}" style="color: black">
                     {{-- <img src="{{ asset('assets/images/icons/sharelocks.png')}}"> --}}
                 </div>
             </div>
