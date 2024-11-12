@@ -17,6 +17,7 @@ class EditTicketRequest extends FormRequest
             'event_id' => 'required|integer|exists:events,id',
             'qty' => 'required|integer',
             'price' => 'required|integer',
+            'type' => 'required|string',
         ];
     }
 }

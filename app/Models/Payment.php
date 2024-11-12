@@ -6,33 +6,30 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+// This class table is added directly to db
 /**
  * @property int $id
+ * @property string $ref
+ * @property string $email
+ * @property string $phone
+ * @property integer $amount
  * @property integer $event_id
- * @property integer $qty
- * @property integer $price
- * @property integer $sold_amount
- * @property string $img_url
+ * @property string $ticket_type
  * @property CarbonInterface $created_at
  * @property CarbonInterface $updated_at
  */
-class Ticket extends Model
+class Payment extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'event_id', 'qty', 
-        'price', 'img_url', 
-        'type' // added directly to db
+        'event_id', 'ref', 
+        'amount', 'email',
+        'phone', 'ticket_type'
     ];
 
     public function event(): BelongsTo
     {
         return $this->belongsTo(Event::class);
-    }
-
-    public function amountSold()
-    {
-        return $this->sold_amount * $this->price;
     }
 }

@@ -33,6 +33,12 @@
             </ul>
           </div>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('payments.index') }}">
+            <i class="mdi mdi-grid-large menu-icon"></i>
+            <span class="menu-title">Payments</span>
+          </a>
+        </li>
       <li class="nav-item nav-category">Porfolio & Artist Data</li>
       <li class="nav-item">
         <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false"

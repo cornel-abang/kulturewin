@@ -219,17 +219,41 @@ $(".book-ticket-btn").click(function(e){
     });
 
     $(".pay-event-btn").click(function(){
+        let Totalprice = parseInt($("#ticket-amount").val() * 100);
+        $("#ticket-amount").val(Totalprice);
       $('#buy-ticket-form').submit();
     });
 
-    function fillModalWith(event)
-    {
-        // console.log($('#unit-price').val(), event.ticket.price);
+    function fillModalWith(event) {
         $('#event').val(event.title);
-        $('#unit-price').val(event.ticket.price);
         $('#event-id').val(event.id);
         $('#event-title').text(event.title);
-        $("#ticket-qty").attr('max', event.ticket.qty);
+
+        // Clear existing options in ticket type dropdown
+        $("#ticket-type").empty();
+
+        event.tickets.forEach(ticket => {
+            $("#ticket-type").append(new Option(`${ticket.type} - ₦${ticket.price}`, ticket.price));
+        });
+
+        // Set default values based on first ticket type
+        const firstTicket = event.tickets[0];
+        $('#unit-price').val(firstTicket.price);
+        $("#ticket-qty").attr('max', firstTicket.qty);
+        calculateTotalAmount();
+    }
+
+    // Update total amount calculation when ticket type changes
+    $("#ticket-type").on("change", function() {
+        $('#unit-price').val($(this).val());
+        calculateTotalAmount();
+    });
+
+    function calculateTotalAmount() {
+        let price = parseInt($("#unit-price").val());
+        let qty = parseInt($("#ticket-qty").val()) || 0;
+        let totalAmount = price * qty;
+        $("#ticket-amount").val(totalAmount);
     }
 
     // If you want to pause the animation on hover

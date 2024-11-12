@@ -29,6 +29,15 @@
                         @endif
                     </div>
                     <div class="form-group">
+                      <label for="exampleInputEmail1">Ticket type<span>*</span></label>
+                      <input type="text" class="form-control" id="exampleInputType" placeholder="Ex. VIP" name="type" value="{{ $ticket->type }}"> 
+                      @if ($errors->has('type'))
+                            <small class="invalid-feedback" role="alert">
+                            {{ $errors->first('type') }}
+                            </small>
+                        @endif
+                    </div>
+                    <div class="form-group">
                       <label for="exampleInputEmail1">Ticket quantity<span>*</span></label>
                       <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Ex.: 1,2,3.." name="qty" value="{{ $ticket->qty }}"> 
                       @if ($errors->has('qty'))

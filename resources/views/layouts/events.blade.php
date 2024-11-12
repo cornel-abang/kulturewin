@@ -1,4 +1,4 @@
-<section class="section" id="">
+<section class="section" id="upcoming-events">
     <div class="event-txt-area">
         <h3>Upcoming Events</h3>
         <p>Explore our calendar and secure tickets to upcoming events in your city.</p>
@@ -15,9 +15,9 @@
             <div class="event-info">
                 {{-- <div class="title">Our Story</div> --}}
                 {{-- <a href="{{ route('ticket.get', $event->id) }}"> --}}
-                {{-- <a href="{{ route('event.get', $event->id) }}" class="book-ticket-btn" data-id="{{ $event->id }}"> --}}
+                <a href="{{ route('event.get', $event->id) }}" class="book-ticket-btn" data-id="{{ $event->id }}">
                 {{-- <span>The testx</span> --}}
-                <a href="#" class="" data-id="{{ $event->id }}">
+                {{-- <a href="#" class="" data-id="{{ $event->id }}"> --}}
                     <div class="event-cta-tx">
                         GET TIKCET 
                     </div>
@@ -44,6 +44,10 @@
                       <label for="exampleInputEmail1">Event</label>
                       <input type="text" class="form-control" id="event" value="" readonly>
                   </div>
+                <div class="form-group">
+                    <label for="ticket-type">Ticket Type<small>•</small></label>
+                    <select name="ticket_type" class="form-control" id="ticket-type" required></select>
+                </div>                
                   <div class="form-group">
                       <label for="exampleInputPassword1">Ticket price per unit<small>•</small></label>
                       <input type="text" class="form-control" id="unit-price" value="" readonly>

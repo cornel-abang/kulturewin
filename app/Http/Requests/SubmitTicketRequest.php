@@ -18,6 +18,7 @@ class SubmitTicketRequest extends FormRequest
             'qty' => 'required|integer',
             'price' => 'required|integer',
             'img' => 'required|image|mimes:jpeg,png,jpg,gif',
+            'type' => 'required|string',
         ];
     }
 }

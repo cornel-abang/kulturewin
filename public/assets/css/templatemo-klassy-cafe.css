@@ -50,7 +50,7 @@ reset
 
 .hero-area {
   background: #101010;
-  width: 1500px;
+  width: 100vw;
   height: 850px;
   padding-left: 80px;
   display: flex;
@@ -863,7 +863,7 @@ reset
 }
 
 footer {
-  width: 1440px;
+  width: 100vw;
   height: 503px;
   background: #111617;
   margin-top: 100px;
@@ -2890,7 +2890,7 @@ header
     width: 405px!important;
   }
   footer {
-    width: 440px!important;
+    width: 100vw!important;
     height: 550px!important;
     padding-top: 20px!important;
   }

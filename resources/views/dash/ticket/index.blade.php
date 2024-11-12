@@ -29,11 +29,15 @@
                             Event
                           </th>
                           <th>
+                            Type
+                          </th>
+                          <th>
                             Quantity
                           </th>
                           <th>
                             Unit Price <span>&#8358</span>
                           </th>
+                          <th>Amount sold (₦)</th>
                           <th>
                             Action
                           </th>
@@ -45,11 +49,15 @@
                             <td class="py-1">
                                 {{ $ticket->event->title }}
                             </td>
+                            <td>{{ $ticket->type }}</td>
                             <td>
-                              {{ $ticket->qty }}/0
+                              {{ $ticket->qty }}
                             </td>
                             <td>
-                                {{ number_format($ticket->price) }}/0
+                                {{ number_format($ticket->price) }}
+                            </td>
+                            <td>
+                              {{ $ticket->amountSold() }}
                             </td>
                             <td>
                               <a href="{{ route('ticket.edit', $ticket->id) }}" class="action-btn"><li class="fa fa-edit"></li></a> | 
